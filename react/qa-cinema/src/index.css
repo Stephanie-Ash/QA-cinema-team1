@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   background-color: #53050D;
+  color: #FFF !important;
 
 }
 
@@ -18,4 +19,19 @@ h6 {
 nav {
   font-family: 'Roboto', sans-serif;
   background-color: #330613;
+  padding: 10%;
+
+}
+
+.navbar-brand img {
+  width: 150px;
+}
+
+.nav-link {
+
+  color: #FFF;
+}
+
+.nav-link:hover {
+  color: #B0B0B0;
 }
