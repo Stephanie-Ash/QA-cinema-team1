@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from "../images/logo.png";
 
 const Navbar = () => {
 
@@ -7,7 +8,7 @@ const Navbar = () => {
         <header>
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
-                    <Link class="navbar-brand" to="#">Navbar</Link>
+                    <Link class="navbar-brand" to="#"><img src={logo} /></Link>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
