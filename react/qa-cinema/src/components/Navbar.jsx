@@ -6,7 +6,7 @@ const Navbar = () => {
 
     return (
         <header>
-            <nav class="navbar navbar-expand-lg">
+            <nav class="navbar navbar-expand-lg" >
                 <div class="container-fluid">
                     <Link class="navbar-brand" to="#"><img src={logo} /></Link>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,13 +18,13 @@ const Navbar = () => {
                                 <Link class="nav-link" to="#">What's On</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link" to="#">Upcoming Films</Link>
+                                <Link class="nav-link" to="#">Upcoming</Link>
                             </li>
                             <li class="nav-item">
                                 <Link class="nav-link" to="#">Booking</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link" to="#">Discussion Board</Link>
+                                <Link class="nav-link" to="#">Discussions</Link>
                             </li>
                             <li class="nav-item dropdown">
                                 <Link class="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -41,8 +41,8 @@ const Navbar = () => {
                             </li>
                         </ul>
                         <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button class="btn btn-outline-success" type="submit">Search</button>
+                            <input class="form-control me-2" type="search" placeholder="Search Term" aria-label="Search" />
+                            <button class="btn" type="submit">Search</button>
                         </form>
                     </div>
                 </div>
