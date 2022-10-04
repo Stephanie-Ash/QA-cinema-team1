@@ -14,6 +14,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route>
+          
 
         </Route>
       </Routes>
