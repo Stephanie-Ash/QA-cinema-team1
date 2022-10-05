@@ -23,16 +23,17 @@ nav {
 
 }
 
-nav input {}
-
 .navbar-brand img {
   width: 150px;
 }
 
 .nav-link {
-  font-size: 20px;
-  color: #FFF !important;
+  font-size: 17px;
+  color: #FFF;
+
 }
+
+
 
 .nav-link:hover {
   color: #B0B0B0;
@@ -42,8 +43,9 @@ nav input {}
   color: #FFF;
 }
 
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1400px) {
   nav {
+
     padding: 10%;
 
   }
@@ -79,9 +81,12 @@ nav input {}
   color: #330613;
 }
 
-.form-control {
+.form-control:focus {
 
-  background-color: #330613 !important;
-  color: #fff !important;
-  border-color: white;
+  border-color: #87C6E8;
+}
+
+.dropdown-item:active {
+
+  background-color: #b0b0b0;
 }
