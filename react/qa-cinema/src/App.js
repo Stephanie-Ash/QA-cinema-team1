@@ -6,16 +6,16 @@ import {
 } from "react-router-dom";
 
 import Navbar from './components/Navbar.jsx';
-import Home from './components/home/home.jsx';
+import OpeningTimes from './components/Openingtimes/OpeningTimes.jsx';
+import Home from './components/home/Home.jsx';
 import Footer from './components/Footer.jsx';
-
-
 function App() {
   return (
 
 
     <BrowserRouter >
       <Navbar />
+      <OpeningTimes/>
       <Routes>
       <Route path='/' element={<Home/>}/>
       </Routes>
@@ -27,3 +27,4 @@ function App() {
 }
 
 export default App;
+
