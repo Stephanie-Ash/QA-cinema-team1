@@ -1,7 +1,3 @@
-import { Link } from "react-router-dom";
-import logo from "../images/logo.png";
-import * as mdb from 'mdb-ui-kit'; // lib
-import { Input } from 'mdb-ui-kit'; // module
 import '../nav.css'
 
 const Footer = () => {
