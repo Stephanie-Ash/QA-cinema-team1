@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import * as mdb from 'mdb-ui-kit'; // lib
 import { Input } from 'mdb-ui-kit'; // module
@@ -7,7 +6,9 @@ import {
 } from "react-router-dom";
 
 import Navbar from './components/Navbar.jsx';
+import Home from './components/home/Home.jsx';
 import Footer from './components/Footer.jsx';
+
 
 function App() {
   return (
@@ -16,9 +17,7 @@ function App() {
     <BrowserRouter >
       <Navbar />
       <Routes>
-        <Route>
-
-        </Route>
+      <Route path='/' element={<Home/>}/>
       </Routes>
       <Footer />
 
