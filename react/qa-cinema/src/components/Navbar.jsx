@@ -9,7 +9,7 @@ const Navbar = () => {
         <header>
             <nav className="navbar navbar-expand-lg" >
                 <div className="container-fluid">
-                    <Link className="navbar-brand" to="#"><img src={logo} alt="logo" /></Link>
+                    <Link className="navbar-brand" to="/"><img src={logo} alt="logo" /></Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -32,7 +32,7 @@ const Navbar = () => {
                                     Cinema Information
                                 </Link>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><Link className="dropdown-item" to="#">Opening Times</Link></li>
+                                    <li><Link className="dropdown-item" to="/openingtimes">Opening Times</Link></li>
                                     <li><Link className="dropdown-item" to="#">Classifications</Link></li>
                                     <li><Link className="dropdown-item" to="#">Places to Go</Link></li>
                                     <li><Link className="dropdown-item" to="#">Find Us</Link></li>

@@ -1,6 +1,4 @@
 import './App.css';
-import * as mdb from 'mdb-ui-kit'; // lib
-import { Input } from 'mdb-ui-kit'; // module
 import {
   BrowserRouter, Routes, Route
 } from "react-router-dom";
@@ -17,10 +15,10 @@ function App() {
 
     <BrowserRouter >
       <Navbar />
-      <OpeningTimes/>
       <Routes>
-        <Route path="/screens" element={<Screens />}/>
-      <Route path='/' element={<Home/>}/>
+        <Route path="/openingtimes" element={<OpeningTimes />} />
+        <Route path="/screens" element={<Screens />} />
+        <Route path='/' element={<Home />} />
       </Routes>
       <Footer />
 
