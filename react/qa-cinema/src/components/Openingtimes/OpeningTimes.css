@@ -1,49 +1,49 @@
-h1{
-    padding: 5% !important;
-    text-align: center;
+h1 {
+  padding: 5% !important;
+  text-align: center;
 }
 
-div.table{
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1mm;
-    text-align: center;
-    border:6px solid rgb(163, 123, 123) 6px;
-   
+div.table {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1mm;
+  text-align: center;
+
 
 }
 
-  table, th{
-    border: 3px solid rgb(54, 46, 46);
-    border-right: 3px outset;
-    border-left: 3px groove;
-    font-size: 30px;
-  }
+table,
+th {
+  font-size: 30px;
+}
 
-  tr.Wednesday {
-    padding: 2px ;
+tr.Wednesday {
+  padding: 2px;
 
-  }
+}
 
 
 
-td.Days{
-    padding: 6px;
-} 
+td.Days {
+  padding: 6px;
+}
+
 td.space {
-    padding: 30px;
+  padding: 30px;
 
 }
+
 p.space2 {
-    padding: 5px;;
+  padding: 5px;
+  ;
 }
 
 div.alert {
-position: relative;
-    width: 900px;
+  position: relative;
+  width: 900px;
   height: 120px;
   padding: 10px;
-    text-align: center;
-    
+  text-align: center;
+
 }
