@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
 import {
   BrowserRouter, Routes, Route
 } from "react-router-dom";
 
 import Navbar from './components/Navbar.jsx';
+import Screens from './components/screens/screens.jsx';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
     <BrowserRouter >
       <Navbar />
       <Routes>
-        <Route>
+        <Route path="/screens" element={<Screens />}>
 
         </Route>
       </Routes>
