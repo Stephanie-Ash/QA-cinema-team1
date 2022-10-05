@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
+import '../nav.css'
 
 const Navbar = () => {
 
@@ -42,7 +43,7 @@ const Navbar = () => {
                         </ul>
                         <form className="d-flex">
                             <input className="form-control me-2" type="search" placeholder="Search Term" aria-label="Search" />
-                            <button className="btn" type="submit">Search</button>
+                            <button className="btnav" type="submit">Search</button>
                         </form>
                     </div>
                 </div>
