@@ -6,3 +6,22 @@
 .cinema-info {
     text-align: justify;
 }
+
+.card, .card-img-top {
+    border-radius: 0;
+}
+
+.card {
+    width: 70%;
+    border: 2px solid #FFF;
+}
+
+.card:hover {
+    border: 3px solid #B0B0B0;
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        width: 90%;
+    }
+}
