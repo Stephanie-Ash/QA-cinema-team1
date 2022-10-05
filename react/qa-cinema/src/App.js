@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 
 import Navbar from './components/Navbar.jsx';
+import OpeningTimes from './components/Openingtimes/OpeningTimes.jsx';
 
 function App() {
   return (
@@ -12,9 +13,10 @@ function App() {
 
     <BrowserRouter >
       <Navbar />
+      <OpeningTimes/>
       <Routes>
         <Route>
-          
+        
 
         </Route>
       </Routes>
@@ -25,3 +27,4 @@ function App() {
 }
 
 export default App;
+
