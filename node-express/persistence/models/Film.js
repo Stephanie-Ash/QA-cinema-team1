@@ -14,8 +14,8 @@ const FilmSchema = new Schema({
     synopsis: String,
     director: String,
     actors: [String],
-    start_date: Date,
-    end_date: Date
+    current: Boolean,
+    upcoming: Boolean
 });
 
 const Film = model('Film', FilmSchema);
