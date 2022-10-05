@@ -5,7 +5,7 @@ import LinkCard from './LinkCard';
 
 import whatsOn from '../../images/home-whats-on.jpg';
 import comingSoon from '../../images/home-coming-soon.jpg';
-import thingsToDo from '../../images/things-to-do.jpg';
+import thingsToDo from '../../images/home-things-to-do.jpg';
 
 const Home = () => {
 
