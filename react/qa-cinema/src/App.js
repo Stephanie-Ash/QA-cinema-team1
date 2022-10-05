@@ -6,6 +6,7 @@ import {
 
 import Navbar from './components/Navbar.jsx';
 import OpeningTimes from './components/Openingtimes/OpeningTimes.jsx';
+import Home from './components/home/Home.jsx';
 
 function App() {
   return (
@@ -15,10 +16,7 @@ function App() {
       <Navbar />
       <OpeningTimes/>
       <Routes>
-        <Route>
-        
-
-        </Route>
+      <Route path='/' element={<Home/>}/>
       </Routes>
 
     </BrowserRouter>
