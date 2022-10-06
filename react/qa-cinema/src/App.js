@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {
   BrowserRouter, Routes, Route
@@ -6,6 +5,10 @@ import {
 
 import Navbar from './components/Navbar.jsx';
 import Home from './components/home/home.jsx';
+import Screens from './components/screens/screens.jsx';
+import OpeningTimes from './components/Openingtimes/OpeningTimes.jsx';
+import Home from './components/home/home.jsx';
+import Footer from './components/Footer.jsx';
 
 function App() {
   return (
@@ -14,8 +17,11 @@ function App() {
     <BrowserRouter >
       <Navbar />
       <Routes>
-      <Route path='/' element={<Home/>}/>
+        <Route path="/openingtimes" element={<OpeningTimes />} />
+        <Route path="/screens" element={<Screens />} />
+        <Route path='/' element={<Home />} />
       </Routes>
+      <Footer />
 
     </BrowserRouter>
 
@@ -23,3 +29,4 @@ function App() {
 }
 
 export default App;
+

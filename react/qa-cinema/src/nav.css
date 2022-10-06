@@ -1,0 +1,107 @@
+nav {
+  font-family: 'Roboto', sans-serif;
+  background-color: #330613;
+  padding: 0%;
+
+
+}
+
+.navbar-brand img {
+  width: 150px;
+}
+
+.nav-link {
+  font-size: 17px;
+  color: #FFF;
+
+
+}
+
+
+
+.nav-link:hover {
+  color: #B0B0B0;
+}
+
+.nav-link:focus {
+  color: #FFF;
+}
+
+@media only screen and (min-width: 1400px) {
+  nav {
+
+    padding: 10%;
+
+
+  }
+}
+
+.navbar-toggler-icon {
+
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+
+}
+
+.navbar-toggler {
+  border-color: #FFF;
+
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+
+}
+
+.btnav {
+  background-color: #330613;
+  margin-left: 5px;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: white;
+
+}
+
+.btnav:hover {
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: #330613;
+}
+
+.btnfoot {
+  margin-left: 5px;
+  border: 1px solid blue;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 30px;
+
+}
+
+.btnfoot:hover {
+  background-color: #0d6efd;
+  opacity: 1;
+  border-radius: 10px;
+  color: #330613;
+}
+
+
+.form-control:focus {
+
+  border-color: #87C6E8;
+}
+
+.dropdown-item:active {
+
+  background-color: #b0b0b0;
+}
+
+.fab {
+  text-decoration: none;
+  color: black;
+}
+
+.col {
+  text-decoration: none;
+  color: white;
+
+}
