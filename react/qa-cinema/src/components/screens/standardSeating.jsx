@@ -1,4 +1,3 @@
-import "./standardSeating.css";
 import standard from "../../images/standard.png"
 
 const StandardSeating = () => {

@@ -53,19 +53,22 @@ nav {
 }
 
 .btnav {
-  background-color: #330613;
   margin-left: 5px;
-  border: 2px solid white;
-  border-radius: 10px;
-  color: white;
-
-}
-
-.btnav:hover {
   background-color: white;
   border: 2px solid white;
   border-radius: 10px;
   color: #330613;
+  padding: 0px 10px 0px 10px;
+
+
+}
+
+.btnav:hover {
+  background-color: #330613;
+
+  border: 2px solid white;
+  border-radius: 10px;
+  color: white;
 }
 
 .btnfoot {
@@ -82,6 +85,10 @@ nav {
   opacity: 1;
   border-radius: 10px;
   color: #330613;
+}
+
+.form-control {
+  border-radius: 10px;
 }
 
 
