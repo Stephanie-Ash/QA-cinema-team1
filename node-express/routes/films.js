@@ -38,7 +38,7 @@ router.put("/update/:id", (req, res) => {
 router.delete("/delete/:id", (req, res) => {
     const id = req.params.id;
     Film.deleteOne({"film_id": id}).then((result) => {
-        res.status(200).send(result);
+        res.status(200).send("Film with id " + id + " successfully deleted");
     }).catch((err) => {
         res.status(500).send(err);
     });

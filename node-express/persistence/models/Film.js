@@ -14,6 +14,9 @@ const FilmSchema = new Schema({
     synopsis: String,
     director: String,
     actors: [String],
+    genre: String,
+    classification: String,
+    length: String,
     current: Boolean,
     upcoming: Boolean
 });
