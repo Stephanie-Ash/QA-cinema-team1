@@ -6,3 +6,31 @@
     padding: 0;
     margin: 0;
 }
+
+.film-card {
+    background-color: initial;
+    border: none;
+}
+
+.film-card:hover {
+    box-shadow: 0 0 5px #25040e;
+    border: none;
+}
+
+.film-card-sm {
+    font-size: 12px;
+}
+
+.film-card-rating {
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.film-card-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.film-card-link:hover {
+    color: #B0B0B0;
+}
