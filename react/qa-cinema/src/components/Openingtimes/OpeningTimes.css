@@ -14,7 +14,7 @@ div.table{
 
 }
 
-  table, th{
+  table.openingtimes, th{
     border: 3px solid rgb(54, 46, 46);
     border-right: 3px outset;
     border-left: 3px groove;
