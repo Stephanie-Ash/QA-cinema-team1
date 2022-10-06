@@ -18,6 +18,22 @@ router.get("/get/:id", (req, res) => {
     });
 });
 
+router.get("/current", (req, res) => {
+    Film.find({"current": true}).then((films) => {
+        res.status(200).send(films);
+    }).catch((err) => {
+        res.status(500).send(err);
+    });
+});
+
+router.get("/upcoming", (req, res) => {
+    Film.find({"upcoming": true}).then((films) => {
+        res.status(200).send(films);
+    }).catch((err) => {
+        res.status(500).send(err);
+    });
+});
+
 router.post("/create", (req, res) => {
     Film.create(req.body).then((film) => {
         res.status(200).send(film);
