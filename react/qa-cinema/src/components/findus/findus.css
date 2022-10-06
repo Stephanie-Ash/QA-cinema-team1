@@ -1,0 +1,65 @@
+.findUsIntro {
+    padding: 0 0 3% 0;
+    text-align: center;
+
+}
+
+td {
+    padding: 0 10px 20px 10px;
+    max-width: 400px;
+    text-align: center;
+    vertical-align: top;
+}
+
+table {
+
+    width: 80%;
+}
+
+.findUsTitles {
+    text-decoration: underline;
+
+}
+
+.entrance {
+    width: 80%;
+    /* aspect-ratio: 1 / 1; */
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    /* Force table to not be like tables anymore */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        position: relative;
+    }
+
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 100%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+}
+
+iframe {
+    border: 0;
+    width: 80%;
+
+}

@@ -1,4 +1,3 @@
-import "./deluxeSeating.css";
 import deluxe from "../../images/deluxe.png"
 
 const DeluxeSeating = () => {
