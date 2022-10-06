@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+div.container-fluid{
+    position: relative;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+p.description {
+    padding: 20px;
+}
+
+img.restaurant {
+    padding: 8px;
+    width: 400px ;
+    height: 400px;
+
+}
+img.arcade{
+    padding: 8px;
+    width: 400px ;
+    height: 400px;
+}
+img.fair{
+    padding: 8px;
+    width: 400px ;
+    height: 400px;
+}
+
+button.btn{
+    margin-top: 5mm;
+}
