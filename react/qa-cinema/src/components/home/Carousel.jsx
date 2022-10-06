@@ -1,6 +1,4 @@
-import example from '../../images/carousel-example.jpg';
-
-const Carousel = () => {
+const Carousel = (props) => {
 
     return (
         <section>
@@ -12,13 +10,13 @@ const Carousel = () => {
                 </div>
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img src={example} className="d-block w-100" alt="..."/>
+                        <img src={props.movies[0].image_url} className="d-block w-100" alt="..."/>
                     </div>
                     <div className="carousel-item">
-                        <img src={example} className="d-block w-100" alt="..."/>
+                        <img src={props.movies[3].image_url} className="d-block w-100" alt="..."/>
                     </div>
                     <div className="carousel-item">
-                        <img src={example} className="d-block w-100" alt="..."/>
+                        <img src={props.movies[2].image_url} className="d-block w-100" alt="..."/>
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

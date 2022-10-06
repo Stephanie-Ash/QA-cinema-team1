@@ -1,13 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
 import {
   BrowserRouter, Routes, Route
 } from "react-router-dom";
 
 import Navbar from './components/Navbar.jsx';
-import OpeningTimes from './components/Openingtimes/OpeningTimes.jsx';
 import Home from './components/home/home.jsx';
+import Screens from './components/screens/screens.jsx';
+import OpeningTimes from './components/Openingtimes/OpeningTimes.jsx';
 import PlacesToGo from './components/PlacesToGo/PlacesInfo';
+import Footer from './components/Footer.jsx';
+import FindUs from './components/findus/Findus.jsx';
 
 function App() {
   return (
@@ -19,7 +21,10 @@ function App() {
       <Route path='/' element={<Home/>}/>
       <Route path='/openingtimes' element={<OpeningTimes/>}/>
       <Route path='/placestogo' element={<PlacesToGo/>}/>
+        <Route path="/screens" element={<Screens />} />
+        <Route path="/findus" element={<FindUs />} />
       </Routes>
+      <Footer />
 
     </BrowserRouter>
 
