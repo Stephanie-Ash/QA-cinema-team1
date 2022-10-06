@@ -7,7 +7,6 @@ import Navbar from './components/Navbar.jsx';
 import Home from './components/home/home.jsx';
 import Screens from './components/screens/screens.jsx';
 import OpeningTimes from './components/Openingtimes/OpeningTimes.jsx';
-import Home from './components/home/home.jsx';
 import Footer from './components/Footer.jsx';
 
 function App() {
