@@ -13,10 +13,13 @@ div.table {
 
 }
 
-table,
-th {
-  font-size: 30px;
-}
+  table.openingtimes, th{
+    border: 3px solid rgb(54, 46, 46);
+    border-right: 3px outset;
+    border-left: 3px groove;
+    font-size: 30px;
+  }
+
 
 tr.Wednesday {
   padding: 2px;
@@ -37,13 +40,4 @@ td.space {
 p.space2 {
   padding: 5px;
   ;
-}
-
-div.alert {
-  position: relative;
-  width: 900px;
-  height: 120px;
-  padding: 10px;
-  text-align: center;
-
 }
