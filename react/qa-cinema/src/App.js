@@ -9,10 +9,11 @@ import Screens from './components/screens/screens.jsx';
 import OpeningTimes from './components/Openingtimes/OpeningTimes.jsx';
 import Footer from './components/Footer.jsx';
 import FindUs from './components/findus/Findus.jsx';
+import SearchPage from './components/search/searchpage';
 
 function App() {
-  return (
 
+  return (
 
     <BrowserRouter >
       <Navbar />
@@ -21,9 +22,10 @@ function App() {
         <Route path="/screens" element={<Screens />} />
         <Route path='/' element={<Home />} />
         <Route path="/findus" element={<FindUs />} />
+        <Route path="/search" element={<SearchPage />} />
       </Routes>
-      <Footer />
 
+      <Footer />
     </BrowserRouter>
 
   );
