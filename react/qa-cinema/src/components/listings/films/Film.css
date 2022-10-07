@@ -1,0 +1,17 @@
+.card-mb-3{
+    background-color: rgb(114, 41, 41);
+    padding: 12px
+    border groove;
+
+}
+.film-img{
+    width: 543px ;
+    height: 490px;
+    aspect-ratio: 1/1;
+
+}
+div.card-body{
+
+    margin-right: 12px;
+    
+}
