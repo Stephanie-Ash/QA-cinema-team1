@@ -17,10 +17,10 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <Link className="nav-link" to="#">What's On</Link>
+                                <Link className="nav-link" to="/listings/whatson">What's On</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="#">Upcoming</Link>
+                                <Link className="nav-link" to="/listings/upcoming">Upcoming</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="#">Booking</Link>
@@ -35,7 +35,7 @@ const Navbar = () => {
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><Link className="dropdown-item" to="/openingtimes">Opening Times</Link></li>
                                     <li><Link className="dropdown-item" to="#">Classifications</Link></li>
-                                    <li><Link className="dropdown-item" to="#">Places to Go</Link></li>
+                                    <li><Link className="dropdown-item" to="/placestogo">Places to Go</Link></li>
                                     <li><Link className="dropdown-item" to="/findus">Find Us</Link></li>
                                     <li><Link className="dropdown-item" to="#">Contact Us</Link></li>
                                     <li><Link className="dropdown-item" to="#">About Us</Link></li>

@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Film } = require('../persistence/models/Film.js');
 
 router.get("/getAll", (req, res) => {
-    Film.find({}).then((films) => {
+    Film.find({$or: [{"current": true}, {"upcoming": true}]}).then((films) => {
         res.status(200).send(films);
     }).catch((err) => {
         res.status(500).send(err);

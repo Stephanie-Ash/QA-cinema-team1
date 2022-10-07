@@ -10,13 +10,13 @@ const Carousel = (props) => {
                 </div>
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img src={props.movies[0].image_url} className="d-block w-100" alt="..."/>
+                        <img src={props.movies[0].image_url} className="d-block w-100" alt={props.movies[0].title}/>
                     </div>
                     <div className="carousel-item">
-                        <img src={props.movies[3].image_url} className="d-block w-100" alt="..."/>
+                        <img src={props.movies[3].image_url} className="d-block w-100" alt={props.movies[3].title}/>
                     </div>
                     <div className="carousel-item">
-                        <img src={props.movies[2].image_url} className="d-block w-100" alt="..."/>
+                        <img src={props.movies[2].image_url} className="d-block w-100" alt={props.movies[2].title}/>
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
