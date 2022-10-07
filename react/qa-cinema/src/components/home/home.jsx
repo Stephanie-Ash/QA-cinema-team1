@@ -17,19 +17,19 @@ const Home = () => {
 
     useEffect(() => {
         axios
-        .get("http://localhost:3001/films/current")
-        .then(res => res)
-        .then((result) => {
-            setIsLoaded(true);
-            setFilms(result.data);
-        }, (error) => {
-            setIsLoaded(true);
-            setError(error);
-        });
+            .get("http://localhost:3001/films/current")
+            .then(res => res)
+            .then((result) => {
+                setIsLoaded(true);
+                setFilms(result.data);
+            }, (error) => {
+                setIsLoaded(true);
+                setError(error);
+            });
     }, []);
 
-    if(error) {
-        return(
+    if (error) {
+        return (
             <>
             <div>Error loading images: {error.message}</div>
             <Info/>
@@ -60,8 +60,8 @@ const Home = () => {
     } else {
         return (
             <>
-                <Carousel movies={films}/>
-                <Info/>
+                <Carousel movies={films} />
+                <Info />
                 <section className="container-fluid mb-5">
                     <div className="row">
                         <LinkCard image={whatsOn} alt={"Link to Whats On page"} page={"/listings/whatson"}/>
@@ -71,7 +71,7 @@ const Home = () => {
                 </section>
             </>
         )
-    }  
+    }
 }
 
 export default Home;
