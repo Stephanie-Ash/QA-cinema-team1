@@ -6,6 +6,10 @@ body {
 
 }
 
+.main-content {
+  min-height: calc(100vh - 450px);
+}
+
 h1,
 h2,
 h3,

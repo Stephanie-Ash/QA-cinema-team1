@@ -50,9 +50,9 @@ const Home = () => {
             <Info/>
             <section className="container-fluid mb-5">
                 <div className="row">
-                    <LinkCard image={whatsOn} page={"Link to Whats On page"}/>
-                    <LinkCard image={comingSoon} page={"Link to Coming Soon page"}/>
-                    <LinkCard image={thingsToDo} page={"Link to Things To Do page"}/>
+                    <LinkCard image={whatsOn} alt={"Link to Whats On page"} page={"/listings/whatson"}/>
+                    <LinkCard image={comingSoon} alt={"Link to Coming Soon page"} page={"/listings/upcoming"}/>
+                    <LinkCard image={thingsToDo} alt={"Link to Things To Do page"} page={"/placestogo"}/>
                 </div>
             </section>
         </>
@@ -64,9 +64,9 @@ const Home = () => {
                 <Info/>
                 <section className="container-fluid mb-5">
                     <div className="row">
-                        <LinkCard image={whatsOn} page={"Link to Whats On page"}/>
-                        <LinkCard image={comingSoon} page={"Link to Coming Soon page"}/>
-                        <LinkCard image={thingsToDo} page={"Link to Things To Do page"}/>
+                        <LinkCard image={whatsOn} alt={"Link to Whats On page"} page={"/listings/whatson"}/>
+                        <LinkCard image={comingSoon} alt={"Link to Coming Soon page"} page={"/listings/upcoming"}/>
+                        <LinkCard image={thingsToDo} alt={"Link to Things To Do page"} page={"/placestogo"}/>
                     </div>
                 </section>
             </>
