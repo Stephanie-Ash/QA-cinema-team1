@@ -13,12 +13,13 @@ div.table {
 
 }
 
-  table.openingtimes, th{
-    border: 3px solid rgb(54, 46, 46);
-    border-right: 3px outset;
-    border-left: 3px groove;
-    font-size: 30px;
-  }
+table.openingtimes,
+th {
+  border: 3px solid rgb(54, 46, 46);
+  border-right: 3px outset;
+  border-left: 3px groove;
+  font-size: 30px;
+}
 
 
 tr.Wednesday {
@@ -26,18 +27,25 @@ tr.Wednesday {
 
 }
 
-
-
 td.Days {
   padding: 6px;
 }
 
 td.space {
-  padding: 30px;
+  padding: 0;
 
 }
 
 p.space2 {
   padding: 5px;
-  ;
+}
+
+.times-span {
+  padding-right: 5px;
+}
+
+@media screen and (min-width: 600px) {
+  .td.space {
+    padding: 30px;
+  }
 }
