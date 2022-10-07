@@ -55,8 +55,8 @@ const OpeningTimes = () => {
                 <p className="space2"></p>
                 <div className="row mb-4">
                     <div className="col-12">
-                        <div className="alert-warning" >
-                            <i className="fa-solid fa-circle-info"></i>
+                        <div className="alert-warning px-2" >
+                            <span className="times-span"><i className="fa-solid fa-circle-info"></i></span>
 
                             *QA Cinema closes Monday-Saturday  12:30 - 13:30 and Sunday 15:30 - 16:30 for cleaning purposes to ensure we deliver the best possible experience to our customers.<br />
                             *Bank Holiday Opening Hours: 09:30 - 23:00 |

@@ -34,3 +34,7 @@
 .film-card-link:hover {
     color: #B0B0B0;
 }
+
+.fim-card-img {
+    aspect-ratio: 5/3;
+}

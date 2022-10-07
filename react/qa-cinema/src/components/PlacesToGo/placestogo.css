@@ -5,34 +5,41 @@
 
 }
 
-div.container-fluid{
-    position: relative;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
 p.description {
     padding: 20px;
 }
 
 img.restaurant {
     padding: 8px;
-    width: 400px ;
-    height: 400px;
-
+    width: 80%;
+    aspect-ratio: 1/1;
 }
+
 img.arcade{
     padding: 8px;
-    width: 400px ;
-    height: 400px;
+    width: 80%;
+    aspect-ratio: 1/1
 }
 img.fair{
     padding: 8px;
-    width: 400px ;
-    height: 400px;
+    width: 80%;
+    aspect-ratio: 1/1
 }
 
 button.btn{
     margin-top: 5mm;
 }
+
+@media screen and (min-width: 576px) {
+    img.restaurant, img.arcade, img.fair {
+        width: 70%;
+    }
+    
+  }
+
+@media screen and (min-width: 768px) {
+    img.restaurant, img.arcade, img.fair {
+        width: 80%;
+    }
+    
+  }
