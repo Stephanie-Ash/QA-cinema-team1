@@ -1,58 +1,23 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-
-import '../listings.css';
+import { useOutletContext } from 'react-router-dom';
 import ListingHeader from '../ListingHeader';
-import FilmCard from '../FilmCard';
+import FilmMap from '../FilmMap';
 
 const WhatsOn = () => {
-    const [error, setError] = useState(null);
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [films, setFilms] = useState([]);
+    const [films] = useOutletContext();
+    const current = films.filter(film => {
+        return film.current === true;
+    })
 
-    useEffect(() => {
-        axios
-            .get("http://localhost:3001/films/current")
-            .then(res => res)
-            .then((result) => {
-                setIsLoaded(true);
-                setFilms(result.data);
-            }, (error) => {
-                setIsLoaded(true);
-                setError(error);
-            });
-    }, []);
+    return (
+        <>
+            <ListingHeader movies={current} />
+            <section className="container-fluid">
+                <h1>What's On</h1>
+                <FilmMap movies={current}/>
+            </section>
+        </>
+    )
 
-    if (error) {
-        return (
-            <>
-                <div>Error loading images: {error.message}</div>
-                <FilmCard />
-            </>
-        )
-    }
-    else if (!isLoaded) {
-        return (
-            <>
-                <div>Loading image...</div>
-                <FilmCard />
-            </>
-        )
-    } else {
-        return (
-            <>
-                <ListingHeader movies={films} />
-                <section className="container-fluid">
-                    <h1>Whats On</h1>
-                    <div className="row mb-5">
-                        {films.map((film) => (
-                            <FilmCard key={film.film_id} image={film.image_url} rating={film.classification} length={film.length} title={film.title} />
-                        ))}
-                    </div>
-                </section>
-            </>
-        )
-    }
 }
 
 export default WhatsOn;
