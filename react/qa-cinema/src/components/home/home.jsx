@@ -8,7 +8,7 @@ import LinkCard from './LinkCard';
 
 import whatsOn from '../../images/home-whats-on.jpg';
 import comingSoon from '../../images/home-coming-soon.jpg';
-import thingsToDo from '../../images/home-things-to-do.jpg';
+import placesToGo from '../../images/home-places-to-go.jpg';
 
 const Home = () => {
     const [error, setError] = useState(null);
@@ -37,7 +37,7 @@ const Home = () => {
                 <div className="row">
                     <LinkCard image={whatsOn} page={"Link to Whats On page"}/>
                     <LinkCard image={comingSoon} page={"Link to Coming Soon page"}/>
-                    <LinkCard image={thingsToDo} page={"Link to Things To Do page"}/>
+                    <LinkCard image={placesToGo} page={"Link to Places To Go page"}/>
                 </div>
             </section>
         </>
@@ -52,7 +52,7 @@ const Home = () => {
                 <div className="row">
                     <LinkCard image={whatsOn} alt={"Link to Whats On page"} page={"/listings/whatson"}/>
                     <LinkCard image={comingSoon} alt={"Link to Coming Soon page"} page={"/listings/upcoming"}/>
-                    <LinkCard image={thingsToDo} alt={"Link to Things To Do page"} page={"/placestogo"}/>
+                    <LinkCard image={placesToGo} alt={"Link to Places To Go page"} page={"/placestogo"}/>
                 </div>
             </section>
         </>
@@ -66,7 +66,7 @@ const Home = () => {
                     <div className="row">
                         <LinkCard image={whatsOn} alt={"Link to Whats On page"} page={"/listings/whatson"}/>
                         <LinkCard image={comingSoon} alt={"Link to Coming Soon page"} page={"/listings/upcoming"}/>
-                        <LinkCard image={thingsToDo} alt={"Link to Things To Do page"} page={"/placestogo"}/>
+                        <LinkCard image={placesToGo} alt={"Link to Places To Go page"} page={"/placestogo"}/>
                     </div>
                 </section>
             </>
