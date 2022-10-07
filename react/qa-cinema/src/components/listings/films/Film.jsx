@@ -142,7 +142,7 @@ return (
 <div className="container">
    
   <div className="row"> 
-  <h3>Wednesday</h3>
+  <h3>Wednesday </h3>
   <p className="deluxe">Deluxe</p>
     <div className="col">
     <Link to="#">
