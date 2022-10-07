@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
-import '../nav.css'
+import '../nav.css';
+import Searchbox from "./Searchbox.jsx";
+
 
 const Navbar = () => {
-
 
     return (
         <header>
@@ -41,16 +42,10 @@ const Navbar = () => {
                                 </ul>
                             </li>
                         </ul>
-                        <form className="d-flex">
-                            <input className="form-control me-2" type="search" placeholder="Search Term" aria-label="Search" />
-                            <button className="btnav" type="submit">Search</button>
-                        </form>
+                        <Searchbox />
                     </div>
                 </div>
             </nav>
-
-
-
         </header>
     )
 

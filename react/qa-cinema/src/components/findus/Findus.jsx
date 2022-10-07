@@ -52,10 +52,6 @@ const FindUs = () => {
                             </td>
                         </tr>
 
-                        {/* <tr>
-                        <td><h4>49 premium leather seats</h4></td>
-                        <td><h4>Experience your film in true comfort by relaxing into our fully customisable recliner seating, cup holders either side.</h4><br /></td>
-                    </tr> */}
                     </tbody>
                 </table>
             </div>

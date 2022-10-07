@@ -13,10 +13,11 @@ import WhatsOn from './components/listings/whatson/WhatsOn.jsx';
 import Upcoming from './components/listings/upcoming/Upcoming.jsx';
 import Film from './components/listings/films/Film';
 import FindUs from './components/findus/Findus.jsx';
+import SearchPage from './components/search/searchpage';
 
 function App() {
-  return (
 
+  return (
 
     <BrowserRouter >
       <Navbar />
@@ -31,11 +32,11 @@ function App() {
             <Route path='upcoming' element={<Upcoming />} />
             <Route path='film/:id' element={<Film />} />
           </Route>
+          <Route path="/search" element={<SearchPage />} />
           <Route path="findus" element={<FindUs />} />
         </Routes>
       </main>
       <Footer />
-
     </BrowserRouter>
 
   );
