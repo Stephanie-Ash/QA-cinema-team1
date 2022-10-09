@@ -1,22 +1,57 @@
 import { useOutletContext } from 'react-router-dom';
-import { format, addDays } from 'date-fns';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import Prices from './Prices';
 
 const MakeBooking = () => {
 
     const { films } = useOutletContext();
-    const {filmDates } = useOutletContext();
+    const { filmDates } = useOutletContext();
     const { booking, setBooking } = useOutletContext();
     const [selectedFilm, setSelectedFilm] = useState(films[0].title);
+    const navigate = useNavigate();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (booking.adults === 0 && booking.children === 0 && booking.concessions === 0) {
+            alert("Please select at least one seat!")
+        } else {
+            let totalSeats = 0;
+            let price = 0;
+
+            let film = films.filter(film => { return film.title === selectedFilm; })
+
+            if (booking.screen_type === "standard") {
+                totalSeats = parseInt(booking.adults) + parseInt(booking.children) + parseInt(booking.concessions);
+                price = parseInt(booking.adults) * 10 + parseInt(booking.children) * 7 + parseInt(booking.concessions) * 8;
+            } else {
+                totalSeats = parseInt(booking.adults) + parseInt(booking.children) + parseInt(booking.concessions);
+                price = parseInt(booking.adults) * 12 + parseInt(booking.children) * 8.50 + parseInt(booking.concessions) * 9.50;
+
+            }
+
+            setBooking(booking => ({
+                ...booking,
+                total_seats: totalSeats,
+                price: price,
+                film: {
+                    film_id: film[0].film_id,
+                    title: film[0].title
+                }
+            }))
+
+            navigate("/bookings/payment")
+
+        }
+    }
 
     return (
         <section className='container-fluid'>
             <h1>Make a Booking</h1>
             <div className="row">
                 <div className="col-10 mx-auto">
-                    <form className='mb-4'>
+                    <form className='mb-4' onSubmit={handleSubmit}>
                         <div className="mb-3">
                             <label htmlFor="film" className="form-label">Film</label>
                             <select className="form-select" value={selectedFilm} onChange={(e) => setSelectedFilm(e.target.value)} id='film'>
@@ -52,15 +87,15 @@ const MakeBooking = () => {
                             <div className="row">
                                 <div className="col-4">
                                     <label htmlFor="adults" className="form-label">Adults</label>
-                                    <input type="number" className="form-control" id="adults" value={booking.adults} onChange={(e) => setBooking(booking => ({ ...booking, adults: e.target.value }))}/>
+                                    <input type="number" className="form-control" id="adults" value={booking.adults} onChange={(e) => setBooking(booking => ({ ...booking, adults: e.target.value }))} />
                                 </div>
                                 <div className="col-4">
                                     <label htmlFor="children" className="form-label">Children</label>
-                                    <input type="number" className="form-control" id="concessions" value={booking.children} onChange={(e) => setBooking(booking => ({ ...booking, children: e.target.value }))}/>
+                                    <input type="number" className="form-control" id="concessions" value={booking.children} onChange={(e) => setBooking(booking => ({ ...booking, children: e.target.value }))} />
                                 </div>
                                 <div className="col-4">
                                     <label htmlFor="concessions" className="form-label">Concessions</label>
-                                    <input type="number" className="form-control" id="concessions" aria-describedby="concessionsHelp" value={booking.concessions} onChange={(e) => setBooking(booking => ({ ...booking, concessions: e.target.value }))}/>
+                                    <input type="number" className="form-control" id="concessions" aria-describedby="concessionsHelp" value={booking.concessions} onChange={(e) => setBooking(booking => ({ ...booking, concessions: e.target.value }))} />
                                 </div>
                             </div>
                         </div>
