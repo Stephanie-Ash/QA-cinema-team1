@@ -14,6 +14,10 @@ import Upcoming from './components/listings/upcoming/Upcoming.jsx';
 import Film from './components/listings/films/Film';
 import FindUs from './components/findus/Findus.jsx';
 import SearchPage from './components/search/searchpage';
+import Bookings from "./components/bookings/Bookings.jsx";
+import MakeBooking from "./components/bookings/makebooking/MakeBooking.jsx";
+import Payment from "./components/bookings/payment/Payment.jsx";
+import Confirmation from "./components/bookings/confirmation/Confirmation.jsx";
 
 function App() {
 
@@ -31,6 +35,11 @@ function App() {
             <Route path='whatson' element={<WhatsOn />} />
             <Route path='upcoming' element={<Upcoming />} />
             <Route path='film/:id' element={<Film />} />
+          </Route>
+          <Route path='bookings' element={<Bookings />}>
+            <Route path="makebooking" element={<MakeBooking />}/>
+            <Route path="payment" element={<Payment />}/>
+            <Route path="confirmation" element={<Confirmation />}/>
           </Route>
           <Route path="/search" element={<SearchPage />} />
           <Route path="findus" element={<FindUs />} />
