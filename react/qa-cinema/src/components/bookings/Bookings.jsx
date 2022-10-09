@@ -1,24 +1,42 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Outlet } from 'react-router-dom';
+import { format, addDays } from 'date-fns';
+
+import './bookings.css';
 
 const Bookings = () => {
 
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [films, setFilms] = useState([]);
+    const [filmDates] = useState(createDates());
+
+    function createDates() {
+        let datesArr = [];
+        let today = new Date();
+
+        for (let i = 0; i < 6; i++) {
+            let newDate = addDays(today, i);
+            let formattedDate = format(newDate, 'dd/MM/yyyy')
+            datesArr.push(formattedDate);
+        }
+
+        return datesArr;
+    }
 
     const [booking, setBooking] = useState(
         {
+            booking_num: "",
             cust_name: "",
             cust_email: "",
             film: {
                 film_id: "",
                 title: ""
             },
-            date: "",
-            time: "",
-            screen_type: "",
+            date: filmDates[0],
+            time: "12:00",
+            screen_type: "standard",
             adults: 0,
             children: 0,
             concessions: 0,
@@ -59,6 +77,7 @@ const Bookings = () => {
             <>
                 <Outlet context={{
                     films,
+                    filmDates,
                     booking, setBooking}}/>
             </>
         )
