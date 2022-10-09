@@ -1,16 +1,35 @@
-import { useOutletContext } from 'react-router-dom';
+import { createSearchParams, useOutletContext } from 'react-router-dom';
+import { format, addDays } from 'date-fns';
+import { useState } from 'react';
+
+import Prices from './Prices';
 
 const MakeBooking = () => {
 
     const { films } = useOutletContext();
     const { booking, setBooking } = useOutletContext();
 
+    const [filmDates] = useState(createDates());
+
+    function createDates() {
+        let datesArr = [];
+        let today = new Date();
+
+        for(let i = 0; i < 6; i++) {
+            let newDate = addDays(today, i);
+            let formattedDate = format(newDate, 'dd/MM/yyyy')
+            datesArr.push(formattedDate);
+        }
+
+        return datesArr;
+    }
+
     return (
         <section className='container-fluid'>
             <h1>Make a Booking</h1>
             <div className="row">
                 <div className="col-10 mx-auto">
-                    <form>
+                    <form className='mb-4'>
                         <div className="mb-3">
                             <label htmlFor="film" className="form-label">Film</label>
                             <select className="form-select" id='film'>
@@ -32,16 +51,17 @@ const MakeBooking = () => {
                             <label htmlFor="date" className="form-label">Date</label>
                             <select className="form-select" id='date'>
                                 <option>Open this select menu</option>
-                                <option value="standard">Some Date</option>
-                                <option value="deluxe">Another Date</option>
+                                {filmDates.map((date, index) => (
+                                    <option key={index} value={date}>{date}</option>
+                                ))}
                             </select>
                         </div>
                         <div className="mb-3">
                             <label htmlFor="time" className="form-label">Time</label>
                             <select className="form-select" id='time'>
                                 <option>Open this select menu</option>
-                                <option value="standard">Some Time</option>
-                                <option value="deluxe">Another Time</option>
+                                <option value="12:00">12:00</option>
+                                <option value="20:00">20:00</option>
                             </select>
                         </div>
                         <div className="mb-3">
@@ -66,6 +86,7 @@ const MakeBooking = () => {
 
                 </div>
             </div>
+            <Prices />
         </section>
     )
 
