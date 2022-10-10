@@ -17,8 +17,6 @@ nav {
 
 }
 
-
-
 .nav-link:hover {
   color: #B0B0B0;
 }
@@ -60,31 +58,13 @@ nav {
   color: #330613;
   padding: 0px 10px 0px 10px;
 
-
 }
 
 .btnav:hover {
   background-color: #330613;
-
   border: 2px solid white;
   border-radius: 10px;
   color: white;
-}
-
-.btnfoot {
-  margin-left: 5px;
-  border: 1px solid blue;
-  border-radius: 10px;
-  color: white;
-  padding: 15px 30px;
-
-}
-
-.btnfoot:hover {
-  background-color: #0d6efd;
-  opacity: 1;
-  border-radius: 10px;
-  color: #330613;
 }
 
 .form-control {

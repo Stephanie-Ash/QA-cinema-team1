@@ -8,7 +8,7 @@ import LinkCard from './LinkCard';
 
 import whatsOn from '../../images/home-whats-on.jpg';
 import comingSoon from '../../images/home-coming-soon.jpg';
-import thingsToDo from '../../images/home-things-to-do.jpg';
+import placesToGo from '../../images/home-places-to-go.jpg';
 
 const Home = () => {
     const [error, setError] = useState(null);
@@ -17,27 +17,27 @@ const Home = () => {
 
     useEffect(() => {
         axios
-        .get("http://localhost:3001/films/current")
-        .then(res => res)
-        .then((result) => {
-            setIsLoaded(true);
-            setFilms(result.data);
-        }, (error) => {
-            setIsLoaded(true);
-            setError(error);
-        });
+            .get("http://localhost:3001/films/current")
+            .then(res => res)
+            .then((result) => {
+                setIsLoaded(true);
+                setFilms(result.data);
+            }, (error) => {
+                setIsLoaded(true);
+                setError(error);
+            });
     }, []);
 
-    if(error) {
-        return(
+    if (error) {
+        return (
             <>
             <div>Error loading images: {error.message}</div>
             <Info/>
             <section className="container-fluid mb-5">
                 <div className="row">
-                    <LinkCard image={whatsOn} page={"Link to Whats On page"}/>
-                    <LinkCard image={comingSoon} page={"Link to Coming Soon page"}/>
-                    <LinkCard image={thingsToDo} page={"Link to Things To Do page"}/>
+                    <LinkCard image={whatsOn} alt={"Link to Whats On page"} page={"/listings/whatson"}/>
+                    <LinkCard image={comingSoon} alt={"Link to Coming Soon page"} page={"/listings/upcoming"}/>
+                    <LinkCard image={placesToGo} alt={"Link to Places To Go page"} page={"/placestogo"}/>
                 </div>
             </section>
         </>
@@ -50,9 +50,9 @@ const Home = () => {
             <Info/>
             <section className="container-fluid mb-5">
                 <div className="row">
-                    <LinkCard image={whatsOn} page={"Link to Whats On page"}/>
-                    <LinkCard image={comingSoon} page={"Link to Coming Soon page"}/>
-                    <LinkCard image={thingsToDo} page={"Link to Things To Do page"}/>
+                    <LinkCard image={whatsOn} alt={"Link to Whats On page"} page={"/listings/whatson"}/>
+                    <LinkCard image={comingSoon} alt={"Link to Coming Soon page"} page={"/listings/upcoming"}/>
+                    <LinkCard image={placesToGo} alt={"Link to Places To Go page"} page={"/placestogo"}/>
                 </div>
             </section>
         </>
@@ -60,18 +60,18 @@ const Home = () => {
     } else {
         return (
             <>
-                <Carousel movies={films}/>
-                <Info/>
+                <Carousel movies={films} />
+                <Info />
                 <section className="container-fluid mb-5">
                     <div className="row">
-                        <LinkCard image={whatsOn} page={"Link to Whats On page"}/>
-                        <LinkCard image={comingSoon} page={"Link to Coming Soon page"}/>
-                        <LinkCard image={thingsToDo} page={"Link to Things To Do page"}/>
+                        <LinkCard image={whatsOn} alt={"Link to Whats On page"} page={"/listings/whatson"}/>
+                        <LinkCard image={comingSoon} alt={"Link to Coming Soon page"} page={"/listings/upcoming"}/>
+                        <LinkCard image={placesToGo} alt={"Link to Places To Go page"} page={"/placestogo"}/>
                     </div>
                 </section>
             </>
         )
-    }  
+    }
 }
 
 export default Home;
