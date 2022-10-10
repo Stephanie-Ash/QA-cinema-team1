@@ -24,10 +24,10 @@ const MakeBooking = () => {
 
             if (booking.screen_type === "standard") {
                 totalSeats = parseInt(booking.adults) + parseInt(booking.children) + parseInt(booking.concessions);
-                price = parseInt(booking.adults) * 10 + parseInt(booking.children) * 7 + parseInt(booking.concessions) * 8;
+                price = (parseInt(booking.adults) * 10 + parseInt(booking.children) * 7 + parseInt(booking.concessions) * 8).toFixed(2);
             } else {
                 totalSeats = parseInt(booking.adults) + parseInt(booking.children) + parseInt(booking.concessions);
-                price = parseInt(booking.adults) * 12 + parseInt(booking.children) * 8.50 + parseInt(booking.concessions) * 9.50;
+                price = (parseInt(booking.adults) * 12 + parseInt(booking.children) * 8.50 + parseInt(booking.concessions) * 9.50).toFixed(2);
 
             }
 
