@@ -7,10 +7,10 @@ const Email = () => {
 
         event.preventDefault();
 
-        var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;
-        var subject = document.getElementById('subject').value;
-        var message = document.getElementById('message').value;
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
 
         axios.post('http://localhost:3001/emails/create', {
             fullname: name,
@@ -27,27 +27,9 @@ const Email = () => {
 
         event.target.reset();
 
-        document.getElementById('hiddenmessage').innerHTML = "Email has been submitted, a member of our team will contact you shortly.";
-
-        // axios
-        //     .get(`http://localhost:3001/email/search?q=${newPageSearch}`)
-        //     // .get('http://localhost:3001/films/getAll')
-        //     .then(res => res)
-        //     .then((result) => {
-        //         setIsLoaded(true);
-        //         setFilms(result.data);
-        //     }, (error) => {
-        //         setIsLoaded(true);
-        //         setError(error);
-        //     });
-
-        // event.target.reset();
-        // navigate("/search", { state: { newPageSearch: search } })
+        // document.getElementById('hiddenmessage').innerHTML = "Email has been submitted, a member of our team will contact you shortly.";
+        window.alert("Email has been submitted, a member of our team will contact you shortly.");
     }
-
-
-
-
 
     return (
         <>
@@ -79,8 +61,6 @@ const Email = () => {
                     </table>
                 </div>
             </form>
-
-
         </>
     )
 
