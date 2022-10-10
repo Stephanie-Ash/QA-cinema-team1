@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Outlet } from 'react-router-dom';
 import { format, addDays } from 'date-fns';
+import {v4 as uuid} from 'uuid';
 
 import './bookings.css';
 
@@ -11,6 +12,7 @@ const Bookings = () => {
     const [isLoaded, setIsLoaded] = useState(false);
     const [films, setFilms] = useState([]);
     const [filmDates] = useState(createDates());
+    const [bookingNum] = useState(createBookingNumber());
 
     function createDates() {
         let datesArr = [];
@@ -25,9 +27,16 @@ const Bookings = () => {
         return datesArr;
     }
 
+    function createBookingNumber() {
+        let num = uuid();
+        let smallNum = num.slice(0, 10);
+
+        return smallNum;
+    }
+
     const [booking, setBooking] = useState(
         {
-            booking_num: "",
+            booking_num: bookingNum,
             cust_name: "",
             cust_email: "",
             film: {

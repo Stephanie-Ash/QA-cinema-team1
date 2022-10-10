@@ -1,6 +1,7 @@
 import { useOutletContext } from 'react-router-dom';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 import Prices from './Prices';
 
@@ -41,9 +42,15 @@ const MakeBooking = () => {
                 }
             }))
 
-            navigate("/bookings/payment")
+        //     axios.post("http://localhost:3001/bookings/create", booking)
+        //         .then((res) => {
+        //             navigate("/bookings/payment/" + res.data.booking_num)
+        //         }).catch((error) => {
+        //             console.log(error)
+        //             alert("An error has occurred please try again!")
+        //         })
 
-        }
+        // }
     }
 
     return (
@@ -99,7 +106,7 @@ const MakeBooking = () => {
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" className="btn btn-primary">Proceed to Payment</button>
+                        <button type="submit" className="btnav p-2 m-0">Proceed to Payment</button>
                     </form>
 
                 </div>

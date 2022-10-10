@@ -38,7 +38,7 @@ function App() {
           </Route>
           <Route path='bookings' element={<Bookings />}>
             <Route path="makebooking" element={<MakeBooking />}/>
-            <Route path="payment" element={<Payment />}/>
+            <Route path="payment/:bookingNum" element={<Payment />}/>
             <Route path="confirmation" element={<Confirmation />}/>
           </Route>
           <Route path="/search" element={<SearchPage />} />

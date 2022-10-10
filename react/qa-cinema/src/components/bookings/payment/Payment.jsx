@@ -1,14 +1,31 @@
-import { useOutletContext } from 'react-router-dom';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js'
-
+import { useParams } from 'react-router-dom';
+import { useState } from 'react';
 import CheckoutForm from './CheckoutForm';
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PK);
 
 const Payment = () => {
+    const [booking, setBooking] = useState();
+    const {bookingNum} = useParams();
+    const [error, setError] = useState(null);
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [savedBooking, setSavedBooking] = useState();
 
-    const { booking, setBooking } = useOutletContext();
+    // useEffect(() => {
+    //     axios
+    //         .get(`http://localhost:3001/bookings/get/${bookingNum}`)
+    //         .then(res => res)
+    //         .then((result) => {
+    //             setIsLoaded(true);
+    //             setFilms(result.data);
+    //         }, (error) => {
+    //             setIsLoaded(true);
+    //             setError(error);
+    //         });
+    // }, []);
+    
 
     return (
         <section className='container-fluid'>
