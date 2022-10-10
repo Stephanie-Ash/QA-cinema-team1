@@ -15,6 +15,7 @@ import Film from './components/listings/films/Film.jsx';
 import FindUs from './components/findus/Findus.jsx';
 import SearchPage from './components/search/searchpage.jsx';
 import Contact from './components/contact/Contact.jsx'
+import Discussion from "./components/discussion/Discussion.jsx";
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
           <Route path='search' element={<SearchPage />} />
           <Route path='findus' element={<FindUs />} />
           <Route path='contact' element={<Contact />} />
+          <Route path='discussion' element={<Discussion />} />
         </Routes>
       </main>
       <Footer />

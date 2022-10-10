@@ -8,43 +8,43 @@ const OpeningTimes = () => {
             <div className="container-fluid">
                 <table className="OpeningTimes mx-auto">
                     <tbody>
-                        <tr id="Monday" itemprop="openingHours" title="Open Monday at 7am to 1am">
+                        <tr id="Monday" itemProp="openingHours" title="Open Monday at 7am to 1am">
                             <td className="Days">Monday</td>
                             <td className="morning">07:00 - 12:30</td>
                             <td className="space"></td>
                             <td className="evening">13:30- 01:00</td>
                         </tr>
-                        <tr id="Tuesday" itemprop="openingHours" title="Open Tuesday at 7am to 1am">
+                        <tr id="Tuesday" itemProp="openingHours" title="Open Tuesday at 7am to 1am">
                             <td className="Days" >Tuesday</td>
                             <td className="morning">07:00 - 12:30</td>
                             <td className="space"> </td>
                             <td className="evening">13:30- 01:00</td>
                         </tr>
-                        <tr id="Wednesday " itemprop="openingHours" title="Open Wednesday at 7am to 1am">
+                        <tr id="Wednesday " itemProp="openingHours" title="Open Wednesday at 7am to 1am">
                             <td className="Days">Wednesday   </td>
                             <td className="morning">07:00 - 12:30</td>
                             <td className="space"> </td>
                             <td className="evening">13:30- 01:00</td>
                         </tr>
-                        <tr id="Thursday" itemprop="openingHours" title="Open Thursday at 7am to 1am">
+                        <tr id="Thursday" itemProp="openingHours" title="Open Thursday at 7am to 1am">
                             <td className="Days">Thursday</td>
                             <td className="morning">07:00 - 12:30</td>
                             <td className="space"></td>
                             <td className="evening">13:30- 01:00</td>
                         </tr>
-                        <tr id="Friday" itemprop="openingHours" title="Open Friday at 7am to 1am">
+                        <tr id="Friday" itemProp="openingHours" title="Open Friday at 7am to 1am">
                             <td className="Days">Friday</td>
                             <td className="morning">07:00 - 12:30</td>
                             <td className="space"></td>
                             <td className="evening">13:30- 01:00</td>
                         </tr>
-                        <tr id="Saturday" itemprop="openingHours" title="Open Saturday at 7:30am to 1am">
+                        <tr id="Saturday" itemProp="openingHours" title="Open Saturday at 7:30am to 1am">
                             <td className="Days">Saturday</td>
                             <td className="morning">07:30 - 12:30</td>
                             <td className="space"></td>
                             <td className="evening">13:30- 01:00</td>
                         </tr>
-                        <tr id="Sunday" itemprop="openingHours" title="Open Sunday at 11am to 12am">
+                        <tr id="Sunday" itemProp="openingHours" title="Open Sunday at 11am to 12am">
                             <td className="Days">Sunday</td>
                             <td className="morning">11:00 - 15:30</td>
                             <td className="space"></td>
