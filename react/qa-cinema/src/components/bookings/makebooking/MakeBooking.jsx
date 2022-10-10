@@ -1,5 +1,5 @@
-import { useOutletContext } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { useOutletContext, useNavigate } from 'react-router-dom';
+
 import axios from 'axios';
 
 import Prices from './Prices';
@@ -60,8 +60,8 @@ const MakeBooking = () => {
                     <form className='mb-4' onSubmit={handleSubmit}>
                         <div className="mb-3">
                             <label htmlFor="film" className="form-label">Film</label>
-                            <select className="form-select" value={booking.film} onChange={(e) => setBooking(booking => ({ ...booking, film: e.target.value }))} id='film'>
-                                <option>Select Film</option>
+                            <select className="form-select" value={booking.film} onChange={(e) => setBooking(booking => ({ ...booking, film: e.target.value }))} id='film' required>
+                                <option value=''>Select Film</option>
                                 {films.map((film) => (
                                     <option key={film.film_id} value={film.title}>{film.title}</option>
                                 ))}

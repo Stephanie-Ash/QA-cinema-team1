@@ -1,12 +1,13 @@
 import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js'
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
-const CheckoutForm = () => {
+const CheckoutForm = (props) => {
     const stripe = useStripe();
     const elements = useElements();
-
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
+    const navigate = useNavigate();
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
 
 
@@ -24,8 +25,19 @@ const CheckoutForm = () => {
 
         if (error) {
             console.log(error);
+            alert("An error has occurred, please contact the cinema!")
         } else {
-            console.log(paymentMethod);
+            axios.put(`http://localhost:3001/bookings/update/${props.bookingNum}`, {
+                cust_name: name,
+                cust_email: email,
+                has_paid: true
+            })
+                .then((res) => {
+                    navigate("/bookings/confirmed/" + props.bookingNum)
+                }).catch((error) => {
+                    console.log(error)
+                    alert("An error has occurred please contact the cinema!")
+                })
         }
     };
 
@@ -34,18 +46,14 @@ const CheckoutForm = () => {
             <div className="mb-3">
                 <div className="row">
                     <div className="col-6">
-                        <label htmlFor="fname" className="form-label">First Name</label>
-                        <input type="text" className="form-control" id="fname" />
+                        <label htmlFor="name" className="form-label">Name</label>
+                        <input type="text" className="form-control" id="name" onChange={(e) => setName(e.target.value)} />
                     </div>
                     <div className="col-6">
-                        <label htmlFor="lname" className="form-label">Last Name</label>
-                        <input type="text" className="form-control" id="lname" />
+                        <label htmlFor="email" className="form-label">Email Address </label>
+                        <input type="email" className="form-control" id="email" onChange={(e) => setEmail(e.target.value)} />
                     </div>
                 </div>
-            </div>
-            <div className="mb-3">
-                <label htmlFor="email" className="form-label">Email Address</label>
-                <input type="email" className="form-control" id="email" />
             </div>
             <div className='mb-3'>
                 <label htmlFor="card" className="form-label">Credit Card Details</label>

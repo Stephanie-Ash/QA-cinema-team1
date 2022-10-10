@@ -54,7 +54,7 @@ const Payment = () => {
             <div className="row mb-4">
                 <div className="col-10 mx-auto">
                     <Elements stripe={stripePromise}>
-                        <CheckoutForm />
+                        <CheckoutForm bookingNum={bookingNum}/>
                     </Elements>
                 </div>
             </div>
