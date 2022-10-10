@@ -1,17 +1,33 @@
 .card-mb-3{
     background-color: rgb(114, 41, 41);
-    padding: 12px
-    border groove;
-
+    padding: 12px;
+    display: flex
 }
 .film-img{
-    width: 543px ;
-    height: 490px;
-    aspect-ratio: 1/1;
+    width: 100% ;
+    aspect-ratio: 5/3;
+}
+
+div.card-body:hover{
+    box-shadow: 0 0 5px #25040e;
+    border: none;
+}
+span.px-1 {
+padding-left: 0px !important
+}
+
+div.col-3{
+  padding: 0px !important;
+  margin-top: 1rem;
+}
+div.row{
+    margin: 0px;
+}
+div.col-md-8{
+    display: flex;
+}
+div.col{
+padding:0px
 
 }
-div.card-body{
-
-    margin-right: 12px;
-    
-}
+ 

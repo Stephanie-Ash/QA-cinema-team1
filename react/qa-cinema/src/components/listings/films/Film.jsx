@@ -31,11 +31,8 @@ return (
         <div className = "description-box">
         <h5 className="card-title">{film[0].title}</h5>
         <div className="actors">
-            
-
-        <p className="card-actors">Actors: {film[0].actors}</p>
+            {film[0].actors.map(actor => <span className="px-1">{actor}</span>)}
         </div>
-
         <p className="card-director">Director(s): {film[0].director}</p>
         <p className="card-synopsis">Synopsis: {film[0].synopsis}</p>
         <p className="card-genre">Genre: {film[0].genre}</p>
@@ -68,16 +65,17 @@ return (
     </Link>
     </div>
   </div>
-  <div className="row-1">
-    <div className="col">
- <p className="standard">Standard</p>
+  <div className="row"> 
+  <p className="standard">Standard</p>
+    <div className="col-3">
+
  <Link to="#">
     <button type="button" class="btn btn-outline-info">11:00 AM
     <p> 2D</p>
     <p> 6.99</p></button>
     </Link>
     </div>
-    <div className="col">
+    <div className="col-3">
     <Link to="#">
     <button type="button" class="btn btn-outline-info">14:30 PM
     <p> 2D</p>
@@ -85,7 +83,7 @@ return (
     </button>
     </Link>
     </div>
-    <div className="col">
+    <div className="col-3">
     <Link to="#">
     <button type="button" class="btn btn-outline-info">17:45 PM
     <p> 2D</p>
@@ -114,23 +112,24 @@ return (
     </Link>
     </div>
   </div>
-  <div className="row-4">
-    <div className="col">
-        <p className="standard">Standard</p>
+  <div className="row"> 
+  <p className="standard">Standard</p>
+    <div className="col-3">
+       
     <Link to="#">
     <button type="button" class="btn btn-outline-info">11:00 AM
     <p> 2D</p>
     <p> 6.99</p></button>
     </Link>
     </div>
-    <div className="col">
+    <div className="col-3">
     <Link to="#">
     <button type="button" className="btn btn-outline-info">14:30 PM
     <p> 2D</p>
     <p> 6.99</p></button>
     </Link>
     </div>
-    <div className="col">
+    <div className="col-3">
     <Link to="#">
     <button type="button" className="btn btn-outline-info">17:45 PM
     <p> 2D</p>
@@ -160,9 +159,10 @@ return (
       
     </div>
   </div>
-  <div className="row-1">
-    <div className="col">
+  <div className="row">
     <p className="standard">Standard</p>
+    <div className="col">
+    
     <Link to="#">
     <button type="button" className="btn btn-outline-info">11:00 AM
     <p> 2D</p>
@@ -207,23 +207,24 @@ return (
      
     </div>
   </div>
-  <div className="row-1">
-    <div className="col">
-         <p className="standard">Standard</p>
+  <div className="row"> 
+   <p className="standard">Standard</p>
+    <div className="col-3">
+       
     <Link to="#">
     <button type="button" className="btn btn-outline-info">11:00 AM
     <p> 2D</p>
     <p> 6.99</p></button>
     </Link>
     </div>
-    <div className="col">
+    <div className="col-3">
     <Link to="#">
     <button type="button" className="btn btn-outline-info">14:30 PM
     <p> 2D</p>
     <p> 6.99</p></button>
     </Link>
     </div>
-    <div className="col">
+    <div className="col-3">
     <Link to="#">
     <button type="button" className="btn btn-outline-info">17:45 PM
     <p> 2D</p>
@@ -253,23 +254,24 @@ return (
       
     </div>
   </div>
-  <div className="row-1">
-    <div className="col">
-        <p className="standard">Standard</p>
+  <div className="row">
+     <p className="standard">Standard</p>
+    <div className="col-3">
+   
     <Link to="#">
     <button type="button" className="btn btn-outline-info">11:00 AM
     <p> 2D</p>
     <p> 6.99</p></button>
     </Link>
     </div>
-    <div className="col">
+    <div className="col-3">
     <Link to="#">
     <button type="button" className="btn btn-outline-info">14:30 PM
     <p> 2D</p>
     <p> 6.99</p></button>
    </Link>
     </div>
-    <div className="col">
+    <div className="col-3">
     <Link to="#">
     <button type="button" className="btn btn-outline-info">17:45 PM
     <p> 2D</p>
