@@ -37,21 +37,13 @@ const Bookings = () => {
     const [booking, setBooking] = useState(
         {
             booking_num: bookingNum,
-            cust_name: "",
-            cust_email: "",
-            film: {
-                film_id: "",
-                title: ""
-            },
+            film: "",
             date: filmDates[0],
             time: "12:00",
             screen_type: "standard",
             adults: 0,
             children: 0,
             concessions: 0,
-            total_seats: 0,
-            price: 0,
-            has_paid: false
         }
     );
     

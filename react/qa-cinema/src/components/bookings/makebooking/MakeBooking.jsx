@@ -1,5 +1,4 @@
 import { useOutletContext } from 'react-router-dom';
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
@@ -10,7 +9,6 @@ const MakeBooking = () => {
     const { films } = useOutletContext();
     const { filmDates } = useOutletContext();
     const { booking, setBooking } = useOutletContext();
-    const [selectedFilm, setSelectedFilm] = useState(films[0].title);
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
@@ -21,8 +19,6 @@ const MakeBooking = () => {
             let totalSeats = 0;
             let price = 0;
 
-            let film = films.filter(film => { return film.title === selectedFilm; })
-
             if (booking.screen_type === "standard") {
                 totalSeats = parseInt(booking.adults) + parseInt(booking.children) + parseInt(booking.concessions);
                 price = (parseInt(booking.adults) * 10 + parseInt(booking.children) * 7 + parseInt(booking.concessions) * 8).toFixed(2);
@@ -32,25 +28,28 @@ const MakeBooking = () => {
 
             }
 
-            setBooking(booking => ({
-                ...booking,
+            axios.post("http://localhost:3001/bookings/create", {
+                booking_num: booking.booking_num,
+                film: booking.film,
+                date: booking.date,
+                time: booking.time,
+                screen_type: booking.screen_type,
+                adults: booking.adults,
+                children: booking.children,
+                concessions: booking.concessions,
                 total_seats: totalSeats,
                 price: price,
-                film: {
-                    film_id: film[0].film_id,
-                    title: film[0].title
-                }
-            }))
+                has_paid: false
+            })
+                .then((res) => {
+                    navigate("/bookings/payment/" + res.data.booking_num)
+                }).catch((error) => {
+                    console.log(error)
+                    alert("An error has occurred please try again!")
+                })
 
-        //     axios.post("http://localhost:3001/bookings/create", booking)
-        //         .then((res) => {
-        //             navigate("/bookings/payment/" + res.data.booking_num)
-        //         }).catch((error) => {
-        //             console.log(error)
-        //             alert("An error has occurred please try again!")
-        //         })
+        }
 
-        // }
     }
 
     return (
@@ -61,7 +60,7 @@ const MakeBooking = () => {
                     <form className='mb-4' onSubmit={handleSubmit}>
                         <div className="mb-3">
                             <label htmlFor="film" className="form-label">Film</label>
-                            <select className="form-select" value={selectedFilm} onChange={(e) => setSelectedFilm(e.target.value)} id='film'>
+                            <select className="form-select" value={booking.film} onChange={(e) => setBooking(booking => ({ ...booking, film: e.target.value }))} id='film'>
                                 <option>Select Film</option>
                                 {films.map((film) => (
                                     <option key={film.film_id} value={film.title}>{film.title}</option>

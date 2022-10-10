@@ -5,10 +5,7 @@ const BookingSchema = new Schema({
     booking_num: String,
     cust_name: String,
     cust_email: String,
-    film: {
-        film_id: Number,
-        title: ""
-    },
+    film: String,
     date: String,
     time: String,
     screen_type: String,
