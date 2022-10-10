@@ -20,6 +20,8 @@ mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true },
 
 app.use("/films", require("./routes/films.js"));
 app.use("/emails", require("./routes/email.js"));
+app.use("/topics", require("./routes/topics.js"));
+app.use("/posts", require("./routes/posts.js"));
 
 const server = app.listen(3001, () => {
     console.log(`Server started successfully on port: ${server.address().port}`);
