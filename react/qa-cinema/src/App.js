@@ -11,9 +11,10 @@ import Footer from './components/Footer.jsx';
 import Listings from './components/listings/Listings.jsx';
 import WhatsOn from './components/listings/whatson/WhatsOn.jsx';
 import Upcoming from './components/listings/upcoming/Upcoming.jsx';
-import Film from './components/listings/films/Film';
+import Film from './components/listings/films/Film.jsx';
 import FindUs from './components/findus/Findus.jsx';
-import SearchPage from './components/search/searchpage';
+import SearchPage from './components/search/searchpage.jsx';
+import Contact from './components/contact/Contact.jsx'
 
 function App() {
 
@@ -26,14 +27,15 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='openingtimes' element={<OpeningTimes />} />
           <Route path='placestogo' element={<PlacesToGo />} />
-          <Route path="screens" element={<Screens />} />
+          <Route path='screens' element={<Screens />} />
           <Route path='listings' element={<Listings />}>
             <Route path='whatson' element={<WhatsOn />} />
             <Route path='upcoming' element={<Upcoming />} />
             <Route path='film/:id' element={<Film />} />
           </Route>
-          <Route path="/search" element={<SearchPage />} />
-          <Route path="findus" element={<FindUs />} />
+          <Route path='search' element={<SearchPage />} />
+          <Route path='findus' element={<FindUs />} />
+          <Route path='contact' element={<Contact />} />
         </Routes>
       </main>
       <Footer />
