@@ -1,0 +1,42 @@
+.card-mb-3-standard{
+    background-color: rgb(114, 41, 41);
+    padding: 12px;
+    display: flex
+}
+.film-img{
+    width: 100% ;
+    aspect-ratio: 5/3;
+}
+
+div.card-body:hover{
+    box-shadow: 0 0 5px #25040e;
+    border: none;
+}
+span.px-1 {
+padding-left: 0px !important
+}
+
+.col-standard{
+  padding: 0px !important;
+  margin-top: 1rem;
+}
+.times{
+    margin: 0px;
+}
+div.col-md-8{
+    display: flex;
+}
+.col-deluxe{
+padding:0px
+
+}
+p.standard{
+    margin-top: 2%
+}
+ 
+p.deluxe{
+    margin-top: 2%;
+}
+.dayofweek{
+    margin-top: 2%;
+}

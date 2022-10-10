@@ -7,7 +7,7 @@
 td {
     padding: 0 10px 30px 10px;
     max-width: 400px;
-    text-align: left;
+    text-align: center;
 }
 
 table {
@@ -36,5 +36,5 @@ table {
 }
 
 .searchDetails {
-    font-size: 60%;
+    font-size: 20px;
 }
