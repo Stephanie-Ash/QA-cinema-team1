@@ -1,4 +1,4 @@
-.card-mb-3{
+.card-mb-3-standard{
     background-color: rgb(114, 41, 41);
     padding: 12px;
     display: flex
@@ -16,18 +16,27 @@ span.px-1 {
 padding-left: 0px !important
 }
 
-div.col-3{
+.col-standard{
   padding: 0px !important;
   margin-top: 1rem;
 }
-div.row{
+.times{
     margin: 0px;
 }
 div.col-md-8{
     display: flex;
 }
-div.col{
+.col-deluxe{
 padding:0px
 
 }
+p.standard{
+    margin-top: 2%
+}
  
+p.deluxe{
+    margin-top: 2%;
+}
+.dayofweek{
+    margin-top: 2%;
+}
