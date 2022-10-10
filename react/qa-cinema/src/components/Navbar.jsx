@@ -4,6 +4,7 @@ import '../nav.css';
 import Searchbox from "./Searchbox.jsx";
 
 
+
 const Navbar = () => {
 
     return (
@@ -26,7 +27,7 @@ const Navbar = () => {
                                 <Link className="nav-link" to="/bookings/makebooking">Booking</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="#">Discussions</Link>
+                                <Link className="nav-link" to="/discussion">Discussions</Link>
                             </li>
                             <li className="nav-item dropdown">
                                 <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

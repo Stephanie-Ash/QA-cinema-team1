@@ -19,6 +19,7 @@ import MakeBooking from "./components/bookings/makebooking/MakeBooking.jsx";
 import Payment from "./components/bookings/payment/Payment.jsx";
 import Confirmation from "./components/bookings/confirmation/Confirmation.jsx";
 import Contact from './components/contact/Contact.jsx'
+import Discussion from "./components/discussion/Discussion.jsx";
 
 function App() {
 
@@ -45,6 +46,7 @@ function App() {
           <Route path="/search" element={<SearchPage />} />
           <Route path="findus" element={<FindUs />} />
           <Route path='contact' element={<Contact />} />
+          <Route path='discussion' element={<Discussion />} />
         </Routes>
       </main>
       <Footer />
