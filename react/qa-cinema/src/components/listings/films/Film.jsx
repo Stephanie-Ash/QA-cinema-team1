@@ -21,12 +21,12 @@ return (
 <>
 <h1>{film[0].title}</h1>
 <div className ='container-fluid'>
-<div className="card-mb-3" style={{maxwidth: '540px'}}>
+<div className="card-mb-3-col-standard" style={{maxwidth: '540px'}}>
   <div className="row g-0">
-    <div className="col-md-4">
+    <div className="col-md-4 filmdinfo">
       <img src={film[0].image_url} className="film-img" alt=".."/>
     </div>
-    <div className="col-md-8">
+    <div className="col-md-8 filminfo">
       <div className="card-body">
         <div className = "description-box">
         <h5 className="card-title">{film[0].title}</h5>
@@ -45,19 +45,19 @@ return (
   </div>
   <hr></hr>
   <div className ='times-and-dates'>
-  <div className="container">
+  <div className="container day">
    
-  <div className="row"> 
-  <h3>Today</h3>
+  <div className="row times"> 
+  <h3 className ="dayofweek">Today</h3>
   <p className="deluxe">Deluxe</p>
-    <div className="col">
+    <div className="col col-deluxe">
         <Link to="#">
     <button type="button" className="btn btn-outline-danger btn-lg">11:00 AM
     <p> 2D</p>
     <p> 10.99</p></button>
     </Link>
     </div>
-    <div className="col">
+    <div className="col col-deluxe">
     <Link to="#">
     <button type="button" className="btn btn-outline-danger btn-lg">14:30 PM
     <p> 3D</p>
@@ -65,9 +65,9 @@ return (
     </Link>
     </div>
   </div>
-  <div className="row"> 
+  <div className="row times"> 
   <p className="standard">Standard</p>
-    <div className="col-3">
+    <div className="col-3 col-standard">
 
  <Link to="#">
     <button type="button" class="btn btn-outline-info">11:00 AM
@@ -75,7 +75,7 @@ return (
     <p> 6.99</p></button>
     </Link>
     </div>
-    <div className="col-3">
+    <div className="col-3 col-standard">
     <Link to="#">
     <button type="button" class="btn btn-outline-info">14:30 PM
     <p> 2D</p>
@@ -83,7 +83,7 @@ return (
     </button>
     </Link>
     </div>
-    <div className="col-3">
+    <div className="col-3 col-standard">
     <Link to="#">
     <button type="button" class="btn btn-outline-info">17:45 PM
     <p> 2D</p>
@@ -92,19 +92,19 @@ return (
     </div>
   </div>
 </div>
-<div className="container">
+<div className="container day">
    
-  <div className="row"> 
+  <div className="row times"> 
   <h3>Tomorrow</h3>
   <p className="deluxe">Deluxe</p>
-    <div className="col">
+    <div className="col col-deluxe">
     <Link to="#">
     <button type="button" class="btn btn-outline-danger btn-lg">11:00 AM
     <p> 2D</p>
     <p> 10.99</p></button>
     </Link>
     </div>
-    <div className="col">
+    <div className="col col-deluxe">
     <Link to="#">
     <button type="button" class="btn btn-outline-danger btn-lg">14:30 PM
     <p> 3D</p>
@@ -112,9 +112,9 @@ return (
     </Link>
     </div>
   </div>
-  <div className="row"> 
+  <div className="row times"> 
   <p className="standard">Standard</p>
-    <div className="col-3">
+    <div className="col-3 col-standard">
        
     <Link to="#">
     <button type="button" class="btn btn-outline-info">11:00 AM
@@ -122,14 +122,14 @@ return (
     <p> 6.99</p></button>
     </Link>
     </div>
-    <div className="col-3">
+    <div className="col-3 col-standard">
     <Link to="#">
     <button type="button" className="btn btn-outline-info">14:30 PM
     <p> 2D</p>
     <p> 6.99</p></button>
     </Link>
     </div>
-    <div className="col-3">
+    <div className="col-3 col-standard">
     <Link to="#">
     <button type="button" className="btn btn-outline-info">17:45 PM
     <p> 2D</p>
@@ -138,19 +138,19 @@ return (
     </div>
   </div>
 </div>
-<div className="container">
+<div className="container day">
    
-  <div className="row"> 
+  <div className="row times"> 
   <h3>Wednesday </h3>
   <p className="deluxe">Deluxe</p>
-    <div className="col">
+    <div className="col col-deluxe">
     <Link to="#">
     <button type="button" className="btn btn-outline-danger btn-lg">11:00 AM
     <p> 2D</p>
     <p> 10.99</p></button>
     </Link>
 </div>
-    <div className="col">
+    <div className="col col-deluxe">
     <Link to="#">
     <button type="button" className="btn btn-outline-danger btn-lg">14:30 PM
     <p> 3D</p>
@@ -159,9 +159,9 @@ return (
       
     </div>
   </div>
-  <div className="row">
+  <div className="row times">
     <p className="standard">Standard</p>
-    <div className="col">
+    <div className="col-3 col-standard">
     
     <Link to="#">
     <button type="button" className="btn btn-outline-info">11:00 AM
@@ -169,14 +169,14 @@ return (
     <p> 6.99</p></button>
     </Link>
     </div>
-    <div className="col">
+    <div className="col-3 col-standard">
     <Link to="#">
     <button type="button" className="btn btn-outline-info">14:30 PM
     <p> 2D</p>
     <p> 6.99</p></button>
     </Link>
     </div>
-    <div className="col">
+    <div className="col-3 col-standard">
     <Link to="#">
     <button type="button" className="btn btn-outline-info">17:45 PM
     <p> 2D</p>
@@ -186,19 +186,19 @@ return (
     </div>
   </div>
 </div>
-<div className="container">
+<div className="container day">
    
-  <div className="row"> 
+  <div className="row times"> 
   <h3>Thursday</h3>
   <p className="deluxe">Deluxe</p>
-    <div className="col">
+    <div className="col col-deluxe">
     <Link to="#">
     <button type="button" className="btn btn-outline-danger btn-lg">11:00 AM
     <p> 2D</p>
     <p> 10.99</p></button>
     </Link>
     </div>
-    <div className="col">
+    <div className="col col-deluxe">
     <Link to="#">
     <button type="button" className="btn btn-outline-danger btn-lg">14:30 PM
     <p> 3D</p>
@@ -207,9 +207,9 @@ return (
      
     </div>
   </div>
-  <div className="row"> 
+  <div className="row times"> 
    <p className="standard">Standard</p>
-    <div className="col-3">
+    <div className="col-3 col-standard">
        
     <Link to="#">
     <button type="button" className="btn btn-outline-info">11:00 AM
@@ -217,14 +217,14 @@ return (
     <p> 6.99</p></button>
     </Link>
     </div>
-    <div className="col-3">
+    <div className="col-3 col-standard">
     <Link to="#">
     <button type="button" className="btn btn-outline-info">14:30 PM
     <p> 2D</p>
     <p> 6.99</p></button>
     </Link>
     </div>
-    <div className="col-3">
+    <div className="col-3 col-standard">
     <Link to="#">
     <button type="button" className="btn btn-outline-info">17:45 PM
     <p> 2D</p>
@@ -233,19 +233,19 @@ return (
     </div>
   </div>
 </div>
-<div className="container">
+<div className="container day">
    
-  <div className="row"> 
+  <div className="row times"> 
   <h3>Friday</h3>
   <p className="deluxe">Deluxe</p>
-    <div className="col">
+    <div className="col col-deluxe">
     <Link to="#">
     <button type="button" className="btn btn-outline-danger btn-lg">11:00 AM
     <p> 2D</p>
     <p> 10.99</p></button>
     </Link>
     </div>
-    <div className="col">
+    <div className="col col-deluxe">
     <Link to="#">
     <button type="button" className="btn btn-outline-danger btn-lg">14:30 PM
     <p> 3D</p>
@@ -254,9 +254,9 @@ return (
       
     </div>
   </div>
-  <div className="row">
+  <div className="row times">
      <p className="standard">Standard</p>
-    <div className="col-3">
+    <div className="col-3 col-standard">
    
     <Link to="#">
     <button type="button" className="btn btn-outline-info">11:00 AM
@@ -264,14 +264,14 @@ return (
     <p> 6.99</p></button>
     </Link>
     </div>
-    <div className="col-3">
+    <div className="col-3 col-standard">
     <Link to="#">
     <button type="button" className="btn btn-outline-info">14:30 PM
     <p> 2D</p>
     <p> 6.99</p></button>
    </Link>
     </div>
-    <div className="col-3">
+    <div className="col-3 col-standard">
     <Link to="#">
     <button type="button" className="btn btn-outline-info">17:45 PM
     <p> 2D</p>
