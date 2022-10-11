@@ -14,7 +14,7 @@ const Footer = () => {
               <Link className="col footer-link" role="button" to="/">
                 <h5 className="text-uppercase" >Home</h5>
               </Link>
-              <Link className="col footer-link" to="/">
+              <Link className="col footer-link" to="/about">
                 <h5 className="text-uppercase" role="button" >About Us</h5>
               </Link>
               <Link className="col footer-link" to="/">
