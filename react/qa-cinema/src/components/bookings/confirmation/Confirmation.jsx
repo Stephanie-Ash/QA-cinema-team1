@@ -1,9 +1,10 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import BookingDetails from '../BookingDetails.jsx';
 
 const Confirmation = () => {
-    const {bookingNum} = useParams();
+    const { bookingNum } = useParams();
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [savedBooking, setSavedBooking] = useState();
@@ -34,19 +35,14 @@ const Confirmation = () => {
     } else {
         return (
             <section className='container-fluid'>
-            <h1>Booking Confirmation</h1>
-            <div className="row">
-                <div className="col">
-                    <h4>Booking summary</h4>
-                    <p>Booking Number: {savedBooking.booking_num}</p>
-                    <p>Film: {savedBooking.film}</p>
-                    <p>Date: {savedBooking.date}</p>
-                    <p>Time: {savedBooking.time}</p>
-                    <p>Number of Tickets: {savedBooking.total_seats}</p>
-                    <p>Price: £{savedBooking.price}</p>
+                <h1>Booking Confirmation</h1>
+                <div className="row">
+                    <div className="col-12 col-sm-10 mx-auto">
+                        <p>Thank you for your booking. Your booking summary is below. If you have any queries please feel free to <Link className='booking-link' to={"/contact"}>Contact Us</Link> quoting your booking number</p>
+                    </div>
                 </div>
-            </div>
-        </section>
+                <BookingDetails bookingNum={savedBooking.booking_num} savedBooking={savedBooking} totalSeats={savedBooking.total_seats} price={savedBooking.price} />
+            </section>
         )
     }
 

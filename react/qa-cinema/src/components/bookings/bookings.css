@@ -7,6 +7,21 @@
     padding: 10px;
 }
 
-.payment-btn {
-    margin: 0;
+.payment-form {
+    width: 100%;
+}
+
+.booking-link {
+    color: #fff;
+}
+
+.booking-link:hover {
+    color: #B0B0B0;
+}
+
+
+@media screen and (min-width: 380px) {
+    .num-in {
+        width: 33.33333333%;
+    }
 }

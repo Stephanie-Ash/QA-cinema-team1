@@ -24,7 +24,7 @@ const Navbar = () => {
                                 <Link className="nav-link" to="/listings/upcoming">Upcoming</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/bookings/makebooking">Booking</Link>
+                                <Link className="nav-link" to="/makeBooking" state={{chosenFilm: "", chosenScreen: "", chosenDate: "", chosenTime: ""}}>Booking</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/discussion">Discussions</Link>

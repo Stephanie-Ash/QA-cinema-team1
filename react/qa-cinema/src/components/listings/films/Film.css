@@ -12,13 +12,9 @@ div.card-body:hover{
     box-shadow: 0 0 5px #25040e;
     border: none;
 }
-span.px-1 {
-padding-left: 0px !important
-}
 
 .col-standard{
   padding: 0px !important;
-  margin-top: 1rem;
 }
 .times{
     margin: 0px;
@@ -31,12 +27,27 @@ padding:0px
 
 }
 p.standard{
-    margin-top: 2%
+    margin-top: 2%;
+    text-align: center;
 }
  
 p.deluxe{
     margin-top: 2%;
+    text-align: center;
 }
 .dayofweek{
     margin-top: 2%;
+    text-align: center;
+}
+
+.times-standard {
+    margin-bottom: 25px;
+}
+
+.screen-link {
+    color: #fff;
+}
+
+.screen-link:hover {
+    color: #B0B0B0;
 }
