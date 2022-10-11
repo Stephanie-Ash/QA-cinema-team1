@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { format, addDays } from 'date-fns';
 import { v4 as uuid } from 'uuid';
@@ -14,6 +15,9 @@ const MakeBooking = () => {
     const [films, setFilms] = useState([]);
     const filmDates = createDates();
     const bookingNum = createBookingNumber();
+    const location = useLocation();
+    console.log(location);
+    const { chosenFilm, chosenDate, chosenTime, chosenScreen } = location.state;
 
     function createDates() {
         let datesArr = [];
@@ -38,10 +42,10 @@ const MakeBooking = () => {
     const [booking, setBooking] = useState(
         {
             booking_num: bookingNum,
-            film: "",
-            date: filmDates[0],
-            time: "12:00",
-            screen_type: "Standard",
+            film: chosenFilm,
+            date: chosenDate,
+            time: chosenTime,
+            screen_type: chosenScreen,
             adults: 0,
             children: 0,
             concessions: 0,

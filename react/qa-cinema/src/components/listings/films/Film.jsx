@@ -77,21 +77,21 @@ const Film = () => {
               <h3 className="dayofweek">Today</h3>
               <p className="deluxe">Deluxe</p>
               <div className="col-4 col-md-3 col-lg-2 offset-lg-3 offset-md-1 text-center col-deluxe">
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Deluxe", chosenDate: bookingDates[0], chosenTime: "11:00"}}>
                   <button type="button" className="btn btn-outline-danger btn-lg">11:00 AM
                     <p>2D</p>
                     <p>£11.99</p></button>
                 </Link>
               </div>
               <div className="col-4 col-md-3 col-lg-2 text-center col-deluxe">
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Deluxe", chosenDate: bookingDates[0], chosenTime: "14:30"}}>
                   <button type="button" className="btn btn-outline-danger btn-lg">14:30 PM
                     <p>2D</p>
                     <p>£11.99</p></button>
                 </Link>
               </div>
               <div className="col-4 col-md-3 col-lg-2 text-center col-deluxe">
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Deluxe", chosenDate: bookingDates[0], chosenTime: "20:00"}}>
                   <button type="button" className="btn btn-outline-danger btn-lg">20:00 PM
                     <p>2D</p>
                     <p>£11.99</p></button>
@@ -101,14 +101,14 @@ const Film = () => {
             <div className="row times-standard times">
               <p className="standard">Standard</p>
               <div className="col-4 col-md-3 col-lg-2 offset-lg-3 offset-md-1 text-center col-standard">
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Standard", chosenDate: bookingDates[0], chosenTime: "11:00"}}>
                   <button type="button" className="btn btn-outline-info">11:00 AM
                     <p>2D</p>
                     <p>£9.99</p></button>
                 </Link>
               </div>
               <div className="col-4 col-md-3 col-lg-2 text-center col-standard">
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Standard", chosenDate: bookingDates[0], chosenTime: "14:30"}}>
                   <button type="button" className="btn btn-outline-info">14:30 PM
                     <p>2D</p>
                     <p>£9.99</p>
@@ -116,7 +116,7 @@ const Film = () => {
                 </Link>
               </div>
               <div className="col-4 col-md-3 col-lg-2 text-center col-standard">
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Standard", chosenDate: bookingDates[0], chosenTime: "20:00"}}>
                   <button type="button" className="btn btn-outline-info">20:00 PM
                     <p>2D</p>
                     <p>£9.99</p></button>
@@ -130,21 +130,21 @@ const Film = () => {
               <h3 className="dayofweek">{dates[1]}</h3>
               <p className="deluxe">Deluxe</p>
               <div className="col-4 col-md-3 col-lg-2 offset-lg-3 offset-md-1 text-center col-deluxe">
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Deluxe", chosenDate: bookingDates[1], chosenTime: "11:00"}}>
                   <button type="button" className="btn btn-outline-danger btn-lg">11:00 AM
                     <p>2D</p>
                     <p>£11.99</p></button>
                 </Link>
               </div>
               <div className="col-4 col-md-3 col-lg-2 text-center col-deluxe">
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Deluxe", chosenDate: bookingDates[1], chosenTime: "14:30"}}>
                   <button type="button" className="btn btn-outline-danger btn-lg">14:30 PM
                     <p>2D</p>
                     <p>£11.99</p></button>
                 </Link>
               </div>
               <div className="col-4 col-md-3 col-lg-2 text-center col-deluxe">
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Deluxe", chosenDate: bookingDates[1], chosenTime: "20:00"}}>
                   <button type="button" className="btn btn-outline-danger btn-lg">20:00 PM
                     <p>2D</p>
                     <p>£11.99</p></button>
@@ -155,21 +155,21 @@ const Film = () => {
               <p className="standard">Standard</p>
               <div className="col-4 col-md-3 col-lg-2 offset-lg-3 offset-md-1 text-center col-standard">
 
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Standard", chosenDate: bookingDates[1], chosenTime: "11:00"}}>
                   <button type="button" className="btn btn-outline-info">11:00 AM
                     <p>2D</p>
                     <p>£9.99</p></button>
                 </Link>
               </div>
               <div className="col-4 col-md-3 col-lg-2 text-center col-standard">
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Standard", chosenDate: bookingDates[1], chosenTime: "14:30"}}>
                   <button type="button" className="btn btn-outline-info">14:30 PM
                     <p>2D</p>
                     <p>£9.99</p></button>
                 </Link>
               </div>
               <div className="col-4 col-md-3 col-lg-2 text-center col-standard">
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Deluxe", chosenDate: bookingDates[1], chosenTime: "20:00"}}>
                   <button type="button" className="btn btn-outline-info">20:00 PM
                     <p>2D</p>
                     <p>£9.99</p></button>
@@ -183,21 +183,21 @@ const Film = () => {
               <h3 className="dayofweek">{dates[2]}</h3>
               <p className="deluxe">Deluxe</p>
               <div className="col-4 col-md-3 col-lg-2 offset-lg-3 offset-md-1 text-center col-deluxe">
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Deluxe", chosenDate: bookingDates[2], chosenTime: "11:00"}}>
                   <button type="button" className="btn btn-outline-danger btn-lg">11:00 AM
                     <p>2D</p>
                     <p>£11.99</p></button>
                 </Link>
               </div>
               <div className="col-4 col-md-3 col-lg-2 text-center col-deluxe">
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Deluxe", chosenDate: bookingDates[2], chosenTime: "14:30"}}>
                   <button type="button" className="btn btn-outline-danger btn-lg">14:30 PM
                     <p>2D</p>
                     <p>£11.99</p></button>
                 </Link>
               </div>
               <div className="col-4 col-md-3 col-lg-2 text-center col-deluxe">
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Deluxe", chosenDate: bookingDates[2], chosenTime: "20:00"}}>
                   <button type="button" className="btn btn-outline-danger btn-lg">20:00 PM
                     <p>2D</p>
                     <p>£11.99</p></button>
@@ -207,22 +207,21 @@ const Film = () => {
             <div className="row times-standard times">
               <p className="standard">Standard</p>
               <div className="col-4 col-md-3 col-lg-2 offset-lg-3 offset-md-1 text-center col-standard">
-
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Standard", chosenDate: bookingDates[2], chosenTime: "11:00"}}>
                   <button type="button" className="btn btn-outline-info">11:00 AM
                     <p>2D</p>
                     <p>£9.99</p></button>
                 </Link>
               </div>
               <div className="col-4 col-md-3 col-lg-2 text-center col-standard">
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Standard", chosenDate: bookingDates[2], chosenTime: "14:30"}}>
                   <button type="button" className="btn btn-outline-info">14:30 PM
                     <p>2D</p>
                     <p>£9.99</p></button>
                 </Link>
               </div>
               <div className="col-4 col-md-3 col-lg-2 text-center col-standard">
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Standard", chosenDate: bookingDates[2], chosenTime: "20:00"}}>
                   <button type="button" className="btn btn-outline-info">20:00 PM
                     <p>2D</p>
                     <p>£9.99</p>
@@ -237,21 +236,21 @@ const Film = () => {
               <h3 className="dayofweek">{dates[3]}</h3>
               <p className="deluxe">Deluxe</p>
               <div className="col-4 col-md-3 col-lg-2 offset-lg-3 offset-md-1 text-center col-deluxe">
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Deluxe", chosenDate: bookingDates[3], chosenTime: "11:00"}}>
                   <button type="button" className="btn btn-outline-danger btn-lg">11:00 AM
                     <p>2D</p>
                     <p>£11.99</p></button>
                 </Link>
               </div>
               <div className="col-4 col-md-3 col-lg-2 text-center col-deluxe">
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Deluxe", chosenDate: bookingDates[3], chosenTime: "14:30"}}>
                   <button type="button" className="btn btn-outline-danger btn-lg">14:30 PM
                     <p>2D</p>
                     <p>£11.99</p></button>
                 </Link>
               </div>
               <div className="col-4 col-md-3 col-lg-2 text-center col-deluxe">
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Deluxe", chosenDate: bookingDates[3], chosenTime: "20:00"}}>
                   <button type="button" className="btn btn-outline-danger btn-lg">20:00 PM
                     <p>2D</p>
                     <p>£11.99</p></button>
@@ -262,21 +261,21 @@ const Film = () => {
               <p className="standard">Standard</p>
               <div className="col-4 col-md-3 col-lg-2 offset-lg-3 offset-md-1 text-center col-standard">
 
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Standard", chosenDate: bookingDates[3], chosenTime: "11:00"}}>
                   <button type="button" className="btn btn-outline-info">11:00 AM
                     <p>2D</p>
                     <p>£9.99</p></button>
                 </Link>
               </div>
               <div className="col-4 col-md-3 col-lg-2 text-center col-standard">
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Standard", chosenDate: bookingDates[3], chosenTime: "14:30"}}>
                   <button type="button" className="btn btn-outline-info">14:30 PM
                     <p>2D</p>
                     <p>£9.99</p></button>
                 </Link>
               </div>
               <div className="col-4 col-md-3 col-lg-2 text-center col-standard">
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Standard", chosenDate: bookingDates[3], chosenTime: "20:00"}}>
                   <button type="button" className="btn btn-outline-info">20:00 PM
                     <p>2D</p>
                     <p>£9.99</p></button>
@@ -290,21 +289,21 @@ const Film = () => {
               <h3 className="dayofweek">{dates[4]}</h3>
               <p className="deluxe">Deluxe</p>
               <div className="col-4 col-md-3 col-lg-2 offset-lg-3 offset-md-1 text-center col-deluxe">
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Deluxe", chosenDate: bookingDates[4], chosenTime: "11:00"}}>
                   <button type="button" className="btn btn-outline-danger btn-lg">11:00 AM
                     <p>2D</p>
                     <p>£11.99</p></button>
                 </Link>
               </div>
               <div className="col-4 col-md-3 col-lg-2 text-center col-deluxe">
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Deluxe", chosenDate: bookingDates[4], chosenTime: "14:30"}}>
                   <button type="button" className="btn btn-outline-danger btn-lg">14:30 PM
                     <p>2D</p>
                     <p>£11.99</p></button>
                 </Link>
               </div>
               <div className="col-4 col-md-3 col-lg-2 text-center col-deluxe">
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Deluxe", chosenDate: bookingDates[4], chosenTime: "20:00"}}>
                   <button type="button" className="btn btn-outline-danger btn-lg">20:00 PM
                     <p>2D</p>
                     <p>£11.99</p></button>
@@ -315,21 +314,21 @@ const Film = () => {
               <p className="standard">Standard</p>
               <div className="col-4 col-md-3 col-lg-2 offset-lg-3 offset-md-1 text-center col-standard">
 
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Standard", chosenDate: bookingDates[4], chosenTime: "11:00"}}>
                   <button type="button" className="btn btn-outline-info">11:00 AM
                     <p>2D</p>
                     <p>£9.99</p></button>
                 </Link>
               </div>
               <div className="col-4 col-md-3 col-lg-2 text-center col-standard">
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Standard", chosenDate: bookingDates[4], chosenTime: "14:30"}}>
                   <button type="button" className="btn btn-outline-info">14:30 PM
                     <p>2D</p>
                     <p>£9.99</p></button>
                 </Link>
               </div>
               <div className="col-4 col-md-3 col-lg-2 text-center col-standard">
-                <Link to="#">
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Standard", chosenDate: bookingDates[4], chosenTime: "20:00"}}>
                   <button type="button" className="btn btn-outline-info">20:00 PM
                     <p>2D</p>
                     <p>£9.99</p></button>
