@@ -1,6 +1,7 @@
 import {
   BrowserRouter, Routes, Route
 } from "react-router-dom";
+import About from './components/about/about.jsx';
 
 import Navbar from './components/Navbar.jsx';
 import Home from './components/home/home.jsx';
@@ -47,6 +48,7 @@ function App() {
           <Route path="findus" element={<FindUs />} />
           <Route path='contact' element={<Contact />} />
           <Route path='discussion' element={<Discussion />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </main>
       <Footer />
@@ -56,4 +58,3 @@ function App() {
 }
 
 export default App;
-
