@@ -25,15 +25,25 @@ const CheckoutForm = (props) => {
 
         if (error) {
             console.log(error);
-            alert("An error has occurred, please contact the cinema!")
+            alert("There is a problem with your card details please check the form.")
         } else {
-            axios.put(`http://localhost:3001/bookings/update/${props.bookingNum}`, {
+            axios.post("http://localhost:3001/bookings/create", {
+                booking_num: props.savedBooking.booking_num,
                 cust_name: name,
                 cust_email: email,
+                film: props.savedBooking.film,
+                date: props.savedBooking.date,
+                time: props.savedBooking.time,
+                screen_type: props.savedBooking.screen_type,
+                adults: props.savedBooking.adults,
+                children: props.savedBooking.children,
+                concessions: props.savedBooking.concessions,
+                total_seats: props.totalSeats,
+                price: props.price,
                 has_paid: true
             })
                 .then((res) => {
-                    navigate("/bookings/confirmed/" + props.bookingNum)
+                    navigate("/booking/" + res.data.booking_num, )
                 }).catch((error) => {
                     console.log(error)
                     alert("An error has occurred please contact the cinema!")

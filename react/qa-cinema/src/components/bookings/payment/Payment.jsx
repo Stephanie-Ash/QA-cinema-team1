@@ -1,44 +1,29 @@
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js'
-import { useParams } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useLocation } from 'react-router-dom';
 import CheckoutForm from './CheckoutForm';
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PK);
 
 const Payment = () => {
-    const {bookingNum} = useParams();
-    const [error, setError] = useState(null);
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [savedBooking, setSavedBooking] = useState();
+    const location = useLocation();
+    const { savedBooking } = location.state
+    const totalSeats = parseInt(savedBooking.adults) + parseInt(savedBooking.children) + parseInt(savedBooking.concessions);
+    const price = calculatePrice();
 
-    useEffect(() => {
-        axios
-            .get(`http://localhost:3001/bookings/get/${bookingNum}`)
-            .then(res => res)
-            .then((result) => {
-                setIsLoaded(true);
-                setSavedBooking(result.data);
-            }, (error) => {
-                setIsLoaded(true);
-                setError(error);
-            });
-    }, [bookingNum]);
+    function calculatePrice() {
+        let price = 0;
+        if (savedBooking.screen_type === "standard") {
+            price = (parseInt(savedBooking.adults) * 10 + parseInt(savedBooking.children) * 7 + parseInt(savedBooking.concessions) * 8).toFixed(2);
+        } else {
+            price = (parseInt(savedBooking.adults) * 12 + parseInt(savedBooking.children) * 8.50 + parseInt(savedBooking.concessions) * 9.50).toFixed(2);
+        }
 
-    if (error) {
-        return (
-            <div>Error loading data: {error.message}</div>
-
-        )
+        return price;
     }
-    else if (!isLoaded) {
-        return (
-            <div>Loading data...</div>
-        )
-    } else {
-        return (
-            <section className='container-fluid'>
+
+    return (
+        <section className='container-fluid'>
             <h1>Payment</h1>
             <div className="row">
                 <div className="col">
@@ -46,21 +31,20 @@ const Payment = () => {
                     <p>Film: {savedBooking.film}</p>
                     <p>Date: {savedBooking.date}</p>
                     <p>Time: {savedBooking.time}</p>
-                    <p>Number of Tickets: {savedBooking.total_seats}</p>
-                    <p>Price: £{savedBooking.price}</p>
+                    <p>Number of Tickets: {totalSeats}</p>
+                    <p>Price: £{price}</p>
                 </div>
             </div>
-
             <div className="row mb-4">
                 <div className="col-10 mx-auto">
                     <Elements stripe={stripePromise}>
-                        <CheckoutForm bookingNum={bookingNum}/>
+                        <CheckoutForm savedBooking={savedBooking} totalSeats={totalSeats} price={price}/>
                     </Elements>
                 </div>
             </div>
         </section>
-        )
-    }
+    )
 }
+// }
 
 export default Payment;
