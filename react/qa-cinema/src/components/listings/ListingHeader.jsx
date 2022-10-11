@@ -1,7 +1,7 @@
 const ListingHeader = (props) => {
     return(
         <section>
-            <img className="listing-head" src={props.movies[2].image_url} alt={props.movies[1].title} />
+            <img className="listing-head" src={props.source.image_url} alt={props.source.title} />
         </section>
     )
 

@@ -10,7 +10,7 @@ const WhatsOn = () => {
 
     return (
         <>
-            <ListingHeader movies={current} />
+            <ListingHeader source={current[2]} />
             <section className="container-fluid">
                 <h1>What's On</h1>
                 <FilmMap movies={current}/>
