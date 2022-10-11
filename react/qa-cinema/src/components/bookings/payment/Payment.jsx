@@ -13,7 +13,7 @@ const Payment = () => {
 
     function calculatePrice() {
         let price = 0;
-        if (savedBooking.screen_type === "standard") {
+        if (savedBooking.screen_type === "Standard") {
             price = (parseInt(savedBooking.adults) * 10 + parseInt(savedBooking.children) * 7 + parseInt(savedBooking.concessions) * 8).toFixed(2);
         } else {
             price = (parseInt(savedBooking.adults) * 12 + parseInt(savedBooking.children) * 8.50 + parseInt(savedBooking.concessions) * 9.50).toFixed(2);

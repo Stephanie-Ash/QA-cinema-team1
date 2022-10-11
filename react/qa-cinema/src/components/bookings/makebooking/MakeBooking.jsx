@@ -41,7 +41,7 @@ const MakeBooking = () => {
             film: "",
             date: filmDates[0],
             time: "12:00",
-            screen_type: "standard",
+            screen_type: "Standard",
             adults: 0,
             children: 0,
             concessions: 0,
