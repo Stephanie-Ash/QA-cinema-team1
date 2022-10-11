@@ -52,7 +52,7 @@ const CheckoutForm = (props) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className='payment-form' onSubmit={handleSubmit}>
             <div className="mb-3">
                 <div className="row">
                     <div className="col-6">
@@ -71,7 +71,7 @@ const CheckoutForm = (props) => {
                     <CardElement />
                 </div>
             </div>
-            <button className='btnav payment-btn' disabled={!stripe}>Make Payment</button>
+            <button className='btnav m-0 p-2' disabled={!stripe}>Make Payment</button>
         </form>
     )
 

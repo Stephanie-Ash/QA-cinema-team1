@@ -29,7 +29,7 @@ const Footer = () => {
           <br></br>
           <section className="mb-4">
             <p>
-              At QA Cinemas wew strive to provide the best screening experiences for our customers. Please feel free to contact us if you have any queries or would like to arrange a private screeening.
+              At QA Cinemas we strive to provide the best screening experiences for our customers. Please feel free to contact us if you have any queries or would like to arrange a private screeening.
             </p>
           </section>
         </div>
