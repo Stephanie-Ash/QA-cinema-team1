@@ -1,6 +1,7 @@
 import {
   BrowserRouter, Routes, Route
 } from "react-router-dom";
+import About from './components/about/about.jsx';
 
 import Navbar from './components/Navbar.jsx';
 import Home from './components/home/home.jsx';
@@ -49,6 +50,7 @@ function App() {
           <Route path='contact' element={<Contact />} />
           <Route path='discussion' element={<Discussion />} />
           <Route path='classifications' element={<Classifications />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </main>
       <Footer />
@@ -58,4 +60,3 @@ function App() {
 }
 
 export default App;
-
