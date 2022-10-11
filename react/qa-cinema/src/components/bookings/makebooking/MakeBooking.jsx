@@ -16,7 +16,6 @@ const MakeBooking = () => {
     const filmDates = createDates();
     const bookingNum = createBookingNumber();
     const location = useLocation();
-    console.log(location);
     const { chosenFilm, chosenDate, chosenTime, chosenScreen } = location.state;
 
     function createDates() {
@@ -84,7 +83,7 @@ const MakeBooking = () => {
                 <section className='container-fluid'>
                     <h1>Make a Booking</h1>
                     <div className="row">
-                        <div className="col-10 mx-auto">
+                        <div className="col-12 col-sm-10 col-md-8 col-lg-6 mx-auto">
                             <BookingForm films={films} filmDates={filmDates} booking={booking} setBooking={setBooking} />
                         </div>
                     </div>

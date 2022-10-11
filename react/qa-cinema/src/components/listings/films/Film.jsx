@@ -169,7 +169,7 @@ const Film = () => {
                 </Link>
               </div>
               <div className="col-4 col-md-3 col-lg-2 text-center col-standard">
-                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Deluxe", chosenDate: bookingDates[1], chosenTime: "20:00"}}>
+                <Link to="/makeBooking" state={{chosenFilm: film[0].title, chosenScreen: "Standard", chosenDate: bookingDates[1], chosenTime: "20:00"}}>
                   <button type="button" className="btn btn-outline-info">20:00 PM
                     <p>2D</p>
                     <p>£9.99</p></button>

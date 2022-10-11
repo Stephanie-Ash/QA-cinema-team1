@@ -57,11 +57,11 @@ const CheckoutForm = (props) => {
                 <div className="row">
                     <div className="col-6">
                         <label htmlFor="name" className="form-label">Name</label>
-                        <input type="text" className="form-control" id="name" onChange={(e) => setName(e.target.value)} />
+                        <input type="text" className="form-control" id="name" onChange={(e) => setName(e.target.value)} required/>
                     </div>
                     <div className="col-6">
                         <label htmlFor="email" className="form-label">Email Address </label>
-                        <input type="email" className="form-control" id="email" onChange={(e) => setEmail(e.target.value)} />
+                        <input type="email" className="form-control" id="email" onChange={(e) => setEmail(e.target.value)} required/>
                     </div>
                 </div>
             </div>
