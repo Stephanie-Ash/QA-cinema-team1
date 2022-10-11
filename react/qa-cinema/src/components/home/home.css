@@ -7,7 +7,8 @@
     text-align: justify;
 }
 
-.card, .card-img-top {
+.card,
+.card-img-top {
     border-radius: 0;
 }
 
@@ -21,7 +22,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    .card {
+    .home-link-card {
         width: 90%;
     }
 }
