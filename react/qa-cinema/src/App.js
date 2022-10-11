@@ -1,6 +1,7 @@
 import {
   BrowserRouter, Routes, Route
 } from "react-router-dom";
+import About from './components/about/about.jsx';
 
 import Navbar from './components/Navbar.jsx';
 import Home from './components/home/home.jsx';
@@ -19,6 +20,7 @@ import Payment from "./components/bookings/payment/Payment.jsx";
 import Confirmation from "./components/bookings/confirmation/Confirmation.jsx";
 import Contact from './components/contact/Contact.jsx'
 import Discussion from "./components/discussion/Discussion.jsx";
+import Classifications from "./components/classifications/classifications.jsx";
 
 function App() {
 
@@ -44,6 +46,8 @@ function App() {
           <Route path="findus" element={<FindUs />} />
           <Route path='contact' element={<Contact />} />
           <Route path='discussion' element={<Discussion />} />
+          <Route path='classifications' element={<Classifications />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </main>
       <Footer />
@@ -53,4 +57,3 @@ function App() {
 }
 
 export default App;
-

@@ -1,0 +1,45 @@
+.classcard {
+    background-color: #330613;
+}
+
+
+.classificationsIntro {
+    padding: 0 0 3% 0;
+    text-align: center;
+}
+
+.classificationsTable {
+    padding: 0 0 3% 0;
+    width: 80%;
+    text-align: center;
+}
+
+td {
+    padding: 0 10px 30px 10px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.classTitles {
+    text-decoration: none;
+    padding: 2% 0 0 0;
+    color: white;
+}
+
+.classTitles:hover {
+    text-decoration: none;
+    padding: 2% 0 0 0;
+    color: #b0b0b0;
+}
+
+.classTitlesLink {
+
+    padding: 2% 0 0 0;
+    color: white;
+}
+
+.classTitlesLink:hover {
+
+    padding: 2% 0 0 0;
+    color: #b0b0b0;
+}
