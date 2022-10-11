@@ -7,7 +7,7 @@ const BookingForm = (props) => {
 
     const navigate = useNavigate();
     const screens = ['Standard', 'Deluxe'];
-    const times = ['11:00', '14:30', '17:45'];
+    const times = ['11:00', '14:30', '20:00'];
 
     const handleSubmit = (e) => {
         e.preventDefault();

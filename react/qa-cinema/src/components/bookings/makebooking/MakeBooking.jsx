@@ -19,7 +19,7 @@ const MakeBooking = () => {
         let datesArr = [];
         let today = new Date();
 
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i < 5; i++) {
             let newDate = addDays(today, i);
             let formattedDate = format(newDate, 'dd/MM/yyyy')
             datesArr.push(formattedDate);
