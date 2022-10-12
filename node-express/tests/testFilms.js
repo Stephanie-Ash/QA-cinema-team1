@@ -113,6 +113,36 @@ describe("Film tests", function() {
         });
     })
 
+    it("Gets all current films", function(done) {
+        chai.request(`${url}/films`).get("/current").end((err, res) => {
+            expect(err).to.be.null;
+            expect(res).to.have.status(200);
+            expect(res.body.length).to.equal(1);
+            expect(res.body[0]).to.include({
+                film_id: 1,
+                title: "Great Film",
+                current: true,
+                upcoming: false
+            });
+            return done();
+        });
+    })
+
+    it("Gets all upcoming films", function(done) {
+        chai.request(`${url}/films`).get("/upcoming").end((err, res) => {
+            expect(err).to.be.null;
+            expect(res).to.have.status(200);
+            expect(res.body.length).to.equal(1);
+            expect(res.body[0]).to.include({
+                film_id: 2,
+                title: "Rubbish Film",
+                current: false,
+                upcoming: true
+            });
+            return done();
+        });
+    })
+
 
     after("Stop Server", function(){
         server.close();
