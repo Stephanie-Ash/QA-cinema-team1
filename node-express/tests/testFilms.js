@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const {Film} = require('../persistence/models/Film.js');
+const { Film } = require('../persistence/models/Film.js');
 const { expect } = require('chai');
 const chai = require('chai');
 const chaiHttp = require('chai-http');
@@ -9,15 +9,15 @@ chai.use(chaiHttp);
 
 const url = "http://127.0.0.1:3001";
 
-before("Connect to database", async function() {
+before("Connect to database", async function () {
     await mongoose.connection.close();
     await mongoose.connect("mongodb://localhost:27017/test-qa-cinema");
     console.log("Test DB connected");
 })
 
-describe("Film tests", function() {
+describe("Film tests", function () {
 
-    this.beforeAll("Add test data", async function() {
+    this.beforeAll("Add test data", async function () {
         let filmOne = {
             film_id: 1,
             title: "Great Film",
@@ -45,7 +45,7 @@ describe("Film tests", function() {
         await Film.create(filmThree);
     })
 
-    it("Gets all current and future films", function(done) {
+    it("Gets all current and future films", function (done) {
         chai.request(`${url}/films`).get("/getAll").end((err, res) => {
             expect(err).to.be.null;
             expect(res).to.have.status(200);
@@ -76,6 +76,10 @@ describe("Film tests", function() {
     // })
 
 
+    after("Stop Server", function () {
 
+        server.close();
+
+    })
 
 })
