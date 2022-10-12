@@ -9,9 +9,9 @@ router.get("/getAll", (req, res) => {
     });
 });
 
-router.get("/get/:id", (req, res) => {
-    const id = req.params.id;
-    Email.findOne({ "email_id": id }).then((email) => {
+router.get("/get/:email", (req, res) => {
+    const emailaddress = req.params.email;
+    Email.find({ "email": emailaddress }).then((email) => {
         res.status(200).send(email);
     }).catch((err) => {
         res.status(500).send(err);
@@ -20,25 +20,25 @@ router.get("/get/:id", (req, res) => {
 
 router.post("/create", (req, res) => {
     Email.create(req.body).then((email) => {
-        res.status(200).send(email);
+        res.status(201).send(email);
     }).catch((err) => {
         res.status(500).send(err);
     });
 });
 
-router.put("/update/:id", (req, res) => {
-    const id = req.params.id;
-    Email.updateOne({ "email_id": id }, req.body).then((result) => {
-        res.status(200).send("Email with id " + id + " successfully updated");
-    }).catch((err) => {
-        res.status(500).send(err);
-    });
-});
+// router.put("/update/:id", (req, res) => {
+//     const id = req.params.id;
+//     Email.updateOne({ "email_id": id }, req.body).then((result) => {
+//         res.status(200).send("Email with id " + id + " successfully updated");
+//     }).catch((err) => {
+//         res.status(500).send(err);
+//     });
+// });
 
-router.delete("/delete/:id", (req, res) => {
-    const id = req.params.id;
-    Email.deleteOne({ "email_id": id }).then((result) => {
-        res.status(200).send("Email with id " + id + " successfully deleted");
+router.delete("/delete/:email", (req, res) => {
+    const emailaddress = req.params.email;
+    Email.deleteMany({ "email": emailaddress }).then((result) => {
+        res.status(200).send("Emails with email address " + emailaddress + " successfully deleted");
     }).catch((err) => {
         res.status(500).send(err);
     });

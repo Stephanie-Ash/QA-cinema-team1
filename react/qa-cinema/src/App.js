@@ -21,14 +21,17 @@ import Confirmation from "./components/bookings/confirmation/Confirmation.jsx";
 import Contact from './components/contact/Contact.jsx'
 import Discussion from "./components/discussion/Discussion.jsx";
 import Classifications from "./components/classifications/classifications.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 
 function App() {
 
   return (
 
     <BrowserRouter >
+      
       <Navbar />
       <main className="main-content">
+        <ScrollToTop />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='openingtimes' element={<OpeningTimes />} />
