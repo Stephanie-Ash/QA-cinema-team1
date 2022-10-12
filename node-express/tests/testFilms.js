@@ -21,6 +21,7 @@ describe("Film tests", function() {
         let filmOne = {
             film_id: 1,
             title: "Great Film",
+            genre: "horror",
             current: true,
             upcoming: false
         }
@@ -79,6 +80,37 @@ describe("Film tests", function() {
             return done();
         });
 
+    })
+
+    it("Gets film with title included in search term", function(done) {
+        chai.request(`${url}/films`).get("/search?q=rubb").end((err, res) => {
+            expect(err).to.be.null;
+            expect(res).to.have.status(200);
+            expect(res.body.length).to.equal(1);
+            expect(res.body[0]).to.include({
+                film_id: 2,
+                title: "Rubbish Film",
+                current: false,
+                upcoming: true
+            });
+            return done();
+        });
+    })
+
+    it("Gets film with genre included in search term", function(done) {
+        chai.request(`${url}/films`).get("/search?q=Horror").end((err, res) => {
+            expect(err).to.be.null;
+            expect(res).to.have.status(200);
+            expect(res.body.length).to.equal(1);
+            expect(res.body[0]).to.include({
+                film_id: 1,
+                title: "Great Film",
+                genre: "horror",
+                current: true,
+                upcoming: false
+            });
+            return done();
+        });
     })
 
 
