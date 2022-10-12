@@ -56,24 +56,35 @@ describe("Film tests", function() {
                 current: true,
                 upcoming: false
             });
+            expect(res.body[1]).to.include({
+                film_id: 2,
+                title: "Rubbish Film",
+                current: false,
+                upcoming: true
+            });
             return done();
         });
     })
 
-    // it("Gets film by id", function(done) {
-    //     chai.request(`${url}/films`).get("/1").end((err, res) => {
-    //         expect(err).to.be.null;
-    //         expect(res).to.have.status(200);
-    //         expect(res.body).to.include({
-    //             film_id: 1,
-    //             title: "Great Film",
-    //             current: true,
-    //             upcoming: false
-    //         });
-    //         return done();
-    //     });
+    it("Gets film by id", function(done) {
+        chai.request(`${url}/films`).get("/get/1").end((err, res) => {
+            expect(err).to.be.null;
+            expect(res).to.have.status(200);
+            expect(res.body).to.include({
+                film_id: 1,
+                title: "Great Film",
+                current: true,
+                upcoming: false
+            });
+            return done();
+        });
 
-    // })
+    })
+
+
+    after("Stop Server", function(){
+        server.close();
+    })
 
 
 
