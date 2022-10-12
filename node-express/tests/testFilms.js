@@ -1,0 +1,81 @@
+const mongoose = require('mongoose');
+const {Film} = require('../persistence/models/Film.js');
+const { expect } = require('chai');
+const chai = require('chai');
+const chaiHttp = require('chai-http');
+const server = require('../index.js');
+
+chai.use(chaiHttp);
+
+const url = "http://127.0.0.1:3001";
+
+before("Connect to database", async function() {
+    await mongoose.connection.close();
+    await mongoose.connect("mongodb://localhost:27017/test-qa-cinema");
+    console.log("Test DB connected");
+})
+
+describe("Film tests", function() {
+
+    this.beforeAll("Add test data", async function() {
+        let filmOne = {
+            film_id: 1,
+            title: "Great Film",
+            current: true,
+            upcoming: false
+        }
+
+        let filmTwo = {
+            film_id: 2,
+            title: "Rubbish Film",
+            current: false,
+            upcoming: true
+        }
+
+        let filmThree = {
+            film_id: 3,
+            title: "Some Film",
+            current: false,
+            upcoming: false
+        }
+
+        await Film.deleteMany({});
+        await Film.create(filmOne);
+        await Film.create(filmTwo);
+        await Film.create(filmThree);
+    })
+
+    it("Gets all current and future films", function(done) {
+        chai.request(`${url}/films`).get("/getAll").end((err, res) => {
+            expect(err).to.be.null;
+            expect(res).to.have.status(200);
+            expect(res.body.length).to.equal(2);
+            expect(res.body[0]).to.include({
+                film_id: 1,
+                title: "Great Film",
+                current: true,
+                upcoming: false
+            });
+            return done();
+        });
+    })
+
+    // it("Gets film by id", function(done) {
+    //     chai.request(`${url}/films`).get("/1").end((err, res) => {
+    //         expect(err).to.be.null;
+    //         expect(res).to.have.status(200);
+    //         expect(res.body).to.include({
+    //             film_id: 1,
+    //             title: "Great Film",
+    //             current: true,
+    //             upcoming: false
+    //         });
+    //         return done();
+    //     });
+
+    // })
+
+
+
+
+})
