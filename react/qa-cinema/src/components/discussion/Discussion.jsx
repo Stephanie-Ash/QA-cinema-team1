@@ -6,6 +6,7 @@ import './discussion.css'
 
 
 
+
 const Discussion = () => {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
@@ -40,6 +41,7 @@ useEffect(() => {
 
 const handleSubmit = event => {
     const topic = document.getElementById('topic').value;
+    setTopic(topic);
     console.log(topic);
     event.preventDefault();
     axios
