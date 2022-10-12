@@ -45,9 +45,9 @@ const MakeBooking = () => {
             date: chosenDate,
             time: chosenTime,
             screen_type: chosenScreen,
-            adults: 0,
-            children: 0,
-            concessions: 0,
+            adults: "0",
+            children: "0",
+            concessions: "0",
         }
     );
 
