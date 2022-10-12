@@ -143,6 +143,50 @@ describe("Film tests", function() {
         });
     })
 
+    it("Creates a film", function(done) {
+        const film = {
+            film_id: 4,
+            title: "New film",
+            genre: "thriller",
+            current: true,
+            upcoming: false
+        }
+
+        chai.request(`${url}/films`).post("/create").send(film).end((err, res) => {
+            expect(err).to.be.null;
+            expect(res).to.have.status(201);
+            expect(res.body).to.include(film);
+
+            return done();
+        });
+    });
+
+    it("Updates a film", function(done) {
+        let film = {
+            title: "New Title"
+        }
+
+        chai.request(`${url}/films`).put("/update/3").send(film).end((err, res) => {
+            expect(err).to.be.null;
+            expect(res).to.have.status(200);
+            expect(res).to.have.property("text")
+            expect(res.text).to.equal("Film with id 3 successfully updated")
+
+            return done();
+        });
+    })
+
+    it("Deletes a film", function(done) {
+        chai.request(`${url}/films`).delete("/delete/2").end((err, res) => {
+            expect(err).to.be.null;
+            expect(res).to.have.status(200);
+            expect(res).to.have.property("text")
+            expect(res.text).to.equal("Film with id 2 successfully deleted")
+
+            return done();
+        });
+    })
+
 
     after("Stop Server", function(){
         server.close();
