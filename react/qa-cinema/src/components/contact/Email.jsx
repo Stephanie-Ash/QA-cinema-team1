@@ -19,16 +19,13 @@ const Email = () => {
             message: message
         })
             .then((response) => {
-                console.log(response);
+                window.alert("Email has been submitted, a member of our team will contact you shortly.");
             }, (error) => {
                 console.log(error);
             });
 
 
         event.target.reset();
-
-        // document.getElementById('hiddenmessage').innerHTML = "Email has been submitted, a member of our team will contact you shortly.";
-        window.alert("Email has been submitted, a member of our team will contact you shortly.");
     }
 
     return (

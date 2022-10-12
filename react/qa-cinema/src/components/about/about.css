@@ -35,3 +35,11 @@
 
 }
 .button2 {border-color:blue;}
+
+.about-link {
+  color: #fff;
+}
+
+.about-link:hover {
+  color: #B0B0B0;
+}

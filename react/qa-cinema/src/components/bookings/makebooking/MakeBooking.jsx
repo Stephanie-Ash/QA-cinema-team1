@@ -1,118 +1,97 @@
-import { useOutletContext, useNavigate } from 'react-router-dom';
-
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import axios from 'axios';
+import { format, addDays } from 'date-fns';
+import { v4 as uuid } from 'uuid';
 
+import '../bookings.css';
+import BookingForm from './BookingForm';
 import Prices from './Prices';
 
 const MakeBooking = () => {
 
-    const { films } = useOutletContext();
-    const { filmDates } = useOutletContext();
-    const { booking, setBooking } = useOutletContext();
-    const navigate = useNavigate();
+    const [error, setError] = useState(null);
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [films, setFilms] = useState([]);
+    const filmDates = createDates();
+    const bookingNum = createBookingNumber();
+    const location = useLocation();
+    const { chosenFilm, chosenDate, chosenTime, chosenScreen } = location.state;
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (booking.adults === 0 && booking.children === 0 && booking.concessions === 0) {
-            alert("Please select at least one seat!")
-        } else {
-            let totalSeats = 0;
-            let price = 0;
+    function createDates() {
+        let datesArr = [];
+        let today = new Date();
 
-            if (booking.screen_type === "standard") {
-                totalSeats = parseInt(booking.adults) + parseInt(booking.children) + parseInt(booking.concessions);
-                price = (parseInt(booking.adults) * 10 + parseInt(booking.children) * 7 + parseInt(booking.concessions) * 8).toFixed(2);
-            } else {
-                totalSeats = parseInt(booking.adults) + parseInt(booking.children) + parseInt(booking.concessions);
-                price = (parseInt(booking.adults) * 12 + parseInt(booking.children) * 8.50 + parseInt(booking.concessions) * 9.50).toFixed(2);
-
-            }
-
-            axios.post("http://localhost:3001/bookings/create", {
-                booking_num: booking.booking_num,
-                film: booking.film,
-                date: booking.date,
-                time: booking.time,
-                screen_type: booking.screen_type,
-                adults: booking.adults,
-                children: booking.children,
-                concessions: booking.concessions,
-                total_seats: totalSeats,
-                price: price,
-                has_paid: false
-            })
-                .then((res) => {
-                    navigate("/bookings/payment/" + res.data.booking_num)
-                }).catch((error) => {
-                    console.log(error)
-                    alert("An error has occurred please try again!")
-                })
-
+        for (let i = 0; i < 5; i++) {
+            let newDate = addDays(today, i);
+            let formattedDate = format(newDate, 'dd/MM/yyyy')
+            datesArr.push(formattedDate);
         }
 
+        return datesArr;
     }
 
-    return (
-        <section className='container-fluid'>
-            <h1>Make a Booking</h1>
-            <div className="row">
-                <div className="col-10 mx-auto">
-                    <form className='mb-4' onSubmit={handleSubmit}>
-                        <div className="mb-3">
-                            <label htmlFor="film" className="form-label">Film</label>
-                            <select className="form-select" value={booking.film} onChange={(e) => setBooking(booking => ({ ...booking, film: e.target.value }))} id='film' required>
-                                <option value=''>Select Film</option>
-                                {films.map((film) => (
-                                    <option key={film.film_id} value={film.title}>{film.title}</option>
-                                ))}
-                            </select>
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="screen-type" className="form-label">Screen Type</label>
-                            <select className="form-select" value={booking.screen_type} onChange={(e) => setBooking(booking => ({ ...booking, screen_type: e.target.value }))} id='screen-type'>
-                                <option value="standard">Standard</option>
-                                <option value="deluxe">Deluxe</option>
-                            </select>
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="date" className="form-label">Date</label>
-                            <select className="form-select" id='date' value={booking.date} onChange={(e) => setBooking(booking => ({ ...booking, date: e.target.value }))}>
-                                {filmDates.map((date, index) => (
-                                    <option key={index} value={date}>{date}</option>
-                                ))}
-                            </select>
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="time" className="form-label">Time</label>
-                            <select className="form-select" id='time' value={booking.time} onChange={(e) => setBooking(booking => ({ ...booking, time: e.target.value }))}>
-                                <option value="12:00">12:00</option>
-                                <option value="20:00">20:00</option>
-                            </select>
-                        </div>
-                        <div className="mb-3">
-                            <div className="row">
-                                <div className="col-4">
-                                    <label htmlFor="adults" className="form-label">Adults</label>
-                                    <input type="number" className="form-control" id="adults" value={booking.adults} onChange={(e) => setBooking(booking => ({ ...booking, adults: e.target.value }))} />
-                                </div>
-                                <div className="col-4">
-                                    <label htmlFor="children" className="form-label">Children</label>
-                                    <input type="number" className="form-control" id="concessions" value={booking.children} onChange={(e) => setBooking(booking => ({ ...booking, children: e.target.value }))} />
-                                </div>
-                                <div className="col-4">
-                                    <label htmlFor="concessions" className="form-label">Concessions</label>
-                                    <input type="number" className="form-control" id="concessions" aria-describedby="concessionsHelp" value={booking.concessions} onChange={(e) => setBooking(booking => ({ ...booking, concessions: e.target.value }))} />
-                                </div>
-                            </div>
-                        </div>
-                        <button type="submit" className="btnav p-2 m-0">Proceed to Payment</button>
-                    </form>
+    function createBookingNumber() {
+        let num = uuid();
+        let smallNum = num.slice(0, 10);
 
-                </div>
+        return smallNum;
+    }
+
+    const [booking, setBooking] = useState(
+        {
+            booking_num: bookingNum,
+            film: chosenFilm,
+            date: chosenDate,
+            time: chosenTime,
+            screen_type: chosenScreen,
+            adults: "0",
+            children: "0",
+            concessions: "0",
+        }
+    );
+
+    useEffect(() => {
+        axios
+            .get("http://localhost:3001/films/current")
+            .then(res => res)
+            .then((result) => {
+                setIsLoaded(true);
+                setFilms(result.data);
+            }, (error) => {
+                setIsLoaded(true);
+                setError(error);
+            });
+    }, []);
+
+    if (error) {
+        return (
+            <div>
+                <p className='mb-0'>Error loading data: {error.message}.</p>
+                <p>Please try again later.</p>
             </div>
-            <Prices />
-        </section>
-    )
+
+        )
+    }
+    else if (!isLoaded) {
+        return (
+            <div>Loading data...</div>
+        )
+    } else {
+        return (
+            <>
+                <section className='container-fluid'>
+                    <h1>Make a Booking</h1>
+                    <div className="row">
+                        <div className="col-12 col-sm-10 col-md-8 col-lg-6 mx-auto">
+                            <BookingForm films={films} filmDates={filmDates} booking={booking} setBooking={setBooking} />
+                        </div>
+                    </div>
+                </section>
+                <Prices />
+            </>
+        )
+    }
 
 }
 

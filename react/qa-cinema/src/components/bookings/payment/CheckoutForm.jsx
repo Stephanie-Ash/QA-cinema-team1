@@ -25,15 +25,25 @@ const CheckoutForm = (props) => {
 
         if (error) {
             console.log(error);
-            alert("An error has occurred, please contact the cinema!")
+            alert("There is a problem with your card details please check the form.")
         } else {
-            axios.put(`http://localhost:3001/bookings/update/${props.bookingNum}`, {
+            axios.post("http://localhost:3001/bookings/create", {
+                booking_num: props.savedBooking.booking_num,
                 cust_name: name,
                 cust_email: email,
+                film: props.savedBooking.film,
+                date: props.savedBooking.date,
+                time: props.savedBooking.time,
+                screen_type: props.savedBooking.screen_type,
+                adults: props.savedBooking.adults,
+                children: props.savedBooking.children,
+                concessions: props.savedBooking.concessions,
+                total_seats: props.totalSeats,
+                price: props.price,
                 has_paid: true
             })
                 .then((res) => {
-                    navigate("/bookings/confirmed/" + props.bookingNum)
+                    navigate("/booking/" + res.data.booking_num, )
                 }).catch((error) => {
                     console.log(error)
                     alert("An error has occurred please contact the cinema!")
@@ -42,16 +52,16 @@ const CheckoutForm = (props) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className='payment-form' onSubmit={handleSubmit}>
             <div className="mb-3">
                 <div className="row">
                     <div className="col-6">
                         <label htmlFor="name" className="form-label">Name</label>
-                        <input type="text" className="form-control" id="name" onChange={(e) => setName(e.target.value)} />
+                        <input type="text" className="form-control" id="name" onChange={(e) => setName(e.target.value)} required/>
                     </div>
                     <div className="col-6">
                         <label htmlFor="email" className="form-label">Email Address </label>
-                        <input type="email" className="form-control" id="email" onChange={(e) => setEmail(e.target.value)} />
+                        <input type="email" className="form-control" id="email" onChange={(e) => setEmail(e.target.value)} required/>
                     </div>
                 </div>
             </div>
@@ -61,7 +71,7 @@ const CheckoutForm = (props) => {
                     <CardElement />
                 </div>
             </div>
-            <button className='btnav payment-btn' disabled={!stripe}>Make Payment</button>
+            <button className='btnav m-0 p-2' disabled={!stripe}>Make Payment</button>
         </form>
     )
 

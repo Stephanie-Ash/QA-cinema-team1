@@ -10,7 +10,7 @@ const Upcoming = () => {
 
     return (
         <>
-            <ListingHeader movies={upcoming} />
+            <ListingHeader source={upcoming[0]} />
             <section className="container-fluid">
                 <h1>Upcoming Films</h1>
                 <FilmMap movies={upcoming}/>

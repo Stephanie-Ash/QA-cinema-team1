@@ -6,7 +6,6 @@ import Searchbox from "./Searchbox.jsx";
 
 
 const Navbar = () => {
-
     return (
         <header>
             <nav className="navbar navbar-expand-lg" >
@@ -24,7 +23,7 @@ const Navbar = () => {
                                 <Link className="nav-link" to="/listings/upcoming">Upcoming</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/bookings/makebooking">Booking</Link>
+                                <Link className="nav-link" to="/makeBooking" state={{ chosenFilm: "", chosenScreen: "", chosenDate: "", chosenTime: "" }}>Booking</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/discussion">Discussions</Link>
@@ -35,7 +34,7 @@ const Navbar = () => {
                                 </Link>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><Link className="dropdown-item" to="/openingtimes">Opening Times</Link></li>
-                                    <li><Link className="dropdown-item" to="#">Classifications</Link></li>
+                                    <li><Link className="dropdown-item" to="/classifications">Classifications</Link></li>
                                     <li><Link className="dropdown-item" to="/placestogo">Places to Go</Link></li>
                                     <li><Link className="dropdown-item" to="/findus">Find Us</Link></li>
                                     <li><Link className="dropdown-item" to="/contact">Contact Us</Link></li>

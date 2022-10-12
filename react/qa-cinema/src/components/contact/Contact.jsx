@@ -1,6 +1,5 @@
 import Email from "./Email.jsx"
 import "./Contact.css"
-import { Link } from 'react-router-dom';
 
 const Contact = () => {
     return (

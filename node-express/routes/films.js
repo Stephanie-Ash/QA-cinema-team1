@@ -46,7 +46,7 @@ router.get("/upcoming", (req, res) => {
 
 router.post("/create", (req, res) => {
     Film.create(req.body).then((film) => {
-        res.status(200).send(film);
+        res.status(201).send(film);
     }).catch((err) => {
         res.status(500).send(err);
     });

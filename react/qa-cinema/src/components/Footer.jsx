@@ -17,11 +17,11 @@ const Footer = () => {
               <Link className="col footer-link" to="/about">
                 <h5 className="text-uppercase" role="button" >About Us</h5>
               </Link>
-              <Link className="col footer-link" to="/">
+              <Link className="col footer-link" to="/contact">
                 <h5 className="text-uppercase" role="button" >Contact Us</h5>
               </Link>
-              <Link className="col footer-link" to="/">
-                <h5 className="text-uppercase" role="button" >FAQ</h5>
+              <Link className="col footer-link" to="/findus">
+                <h5 className="text-uppercase" role="button" >Find Us</h5>
               </Link>
             </div>
           </section>
@@ -29,7 +29,7 @@ const Footer = () => {
           <br></br>
           <section className="mb-4">
             <p>
-              At QA Cinemas wew strive to provide the best screening experiences for our customers. Please feel free to contact us if you have any queries or would like to arrange a private screeening.
+              At QA Cinemas we strive to provide the best screening experiences for our customers. Please feel free to contact us if you have any queries or would like to arrange a private screeening.
             </p>
           </section>
         </div>
@@ -68,7 +68,7 @@ const Footer = () => {
         </section>
         <div className="text-center footer-copyright p-3">
           © 2022 Copyright:
-          <a className="footer-link" href="https://www.qa.com/">
+          <a target="_blank" rel="noreferrer" className="footer-link" href="https://www.qa.com/">
             QAC
           </a>
         </div>

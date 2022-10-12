@@ -15,20 +15,23 @@ import Upcoming from './components/listings/upcoming/Upcoming.jsx';
 import Film from './components/listings/films/Film.jsx';
 import FindUs from './components/findus/Findus.jsx';
 import SearchPage from './components/search/searchpage';
-import Bookings from "./components/bookings/Bookings.jsx";
 import MakeBooking from "./components/bookings/makebooking/MakeBooking.jsx";
 import Payment from "./components/bookings/payment/Payment.jsx";
 import Confirmation from "./components/bookings/confirmation/Confirmation.jsx";
 import Contact from './components/contact/Contact.jsx'
 import Discussion from "./components/discussion/Discussion.jsx";
+import Classifications from "./components/classifications/classifications.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 
 function App() {
 
   return (
 
     <BrowserRouter >
+      
       <Navbar />
       <main className="main-content">
+        <ScrollToTop />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='openingtimes' element={<OpeningTimes />} />
@@ -39,15 +42,14 @@ function App() {
             <Route path='upcoming' element={<Upcoming />} />
             <Route path='film/:id' element={<Film />} />
           </Route>
-          <Route path='bookings' element={<Bookings />}>
-            <Route path="makebooking" element={<MakeBooking />}/>
-            <Route path="payment/:bookingNum" element={<Payment />}/>
-            <Route path="confirmed/:bookingNum" element={<Confirmation />}/>
-          </Route>
-          <Route path="/search" element={<SearchPage />} />
+          <Route path='makebooking' element={<MakeBooking />} />
+          <Route path='payment' element={<Payment />}/>
+          <Route path='booking/:bookingNum' element={<Confirmation />}/>
+          <Route path="search" element={<SearchPage />} />
           <Route path="findus" element={<FindUs />} />
           <Route path='contact' element={<Contact />} />
           <Route path='discussion' element={<Discussion />} />
+          <Route path='classifications' element={<Classifications />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </main>
