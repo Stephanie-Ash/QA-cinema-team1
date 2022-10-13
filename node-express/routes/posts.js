@@ -11,7 +11,7 @@ router.get("/getAll", (req, res) => {
 
  router.get("/get/:topic_name", (req, res) => {
     const topic_name = req.params.topic_name;
-    Post.find({"topic_name": topic_name }).then((post) => {
+    Post.find({"topic_name": topic_name, 'isApproved': true}).then((post) => {
         res.status(200).send(post);
     }).catch((err) => {
         res.status(500).send(err);
