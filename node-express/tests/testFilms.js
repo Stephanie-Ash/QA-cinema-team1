@@ -161,6 +161,21 @@ describe("Film tests", function () {
         });
     });
 
+    it("Gives error when create film without required field", function (done) {
+        const film = {
+            film_id: 4,
+            genre: "thriller",
+            current: true,
+            upcoming: false
+        }
+
+        chai.request(`${url}/films`).post("/create").send(film).end((err, res) => {
+            expect(res).to.have.status(500);
+
+            return done();
+        });
+    });
+
     it("Updates a film", function (done) {
         const film = {
             title: "New Title"
