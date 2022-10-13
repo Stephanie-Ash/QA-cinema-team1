@@ -23,6 +23,7 @@ app.use("/bookings", require("./routes/bookings.js"));
 app.use("/emails", require("./routes/email.js"));
 app.use("/topics", require("./routes/topics.js"));
 app.use("/posts", require("./routes/posts.js"));
+app.use("/UIDs", require("./routes/UIDs.js"));
 
 const server = app.listen(3001, () => {
     console.log(`Server started successfully on port: ${server.address().port}`);
