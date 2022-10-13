@@ -20,7 +20,7 @@ router.get("/get/:bookingNum", (req, res) => {
 
 router.post("/create", (req, res) => {
     Booking.create(req.body).then((booking) => {
-        res.status(200).send(booking);
+        res.status(201).send(booking);
     }).catch((err) => {
         res.status(500).send(err);
     });

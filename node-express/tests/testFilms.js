@@ -18,7 +18,7 @@ before("Connect to database", async function () {
 describe("Film tests", function () {
 
     this.beforeAll("Add test data", async function () {
-        let filmOne = {
+        const filmOne = {
             film_id: 1,
             title: "Great Film",
             genre: "horror",
@@ -26,14 +26,14 @@ describe("Film tests", function () {
             upcoming: false
         }
 
-        let filmTwo = {
+        const filmTwo = {
             film_id: 2,
             title: "Rubbish Film",
             current: false,
             upcoming: true
         }
 
-        let filmThree = {
+        const filmThree = {
             film_id: 3,
             title: "Some Film",
             current: false,
@@ -162,7 +162,7 @@ describe("Film tests", function () {
     });
 
     it("Updates a film", function(done) {
-        let film = {
+        const film = {
             title: "New Title"
         }
 
@@ -190,13 +190,6 @@ describe("Film tests", function () {
 
     after("Stop Server", function(){
         server.close();
-    })
-
-
-    after("Stop Server", function () {
-
-        server.close();
-
     })
 
 })
