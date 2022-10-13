@@ -89,6 +89,20 @@ describe("Email tests", function () {
         });
     })
 
+    it("Create one email but required fields missing", function (done) {
+
+        let email = {
+            fullname: "Denzer Dante",
+            email: "denzerdante@gmail.com",
+            subject: "Refund required",
+        }
+
+        chai.request(`${url}/emails`).post("/create").send(email).end((err, res) => {
+            expect(res).to.have.status(500);
+            return done();
+        });
+    })
+
     it("Delete all emails from a specific email address", function (done) {
         chai.request(`${url}/emails`).delete("/delete/charliechaplin@gmail.com").end((err, res) => {
             expect(err).to.be.null;
