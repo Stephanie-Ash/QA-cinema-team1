@@ -67,7 +67,7 @@ describe("Film tests", function () {
         });
     })
 
-    it("Gets film by id", function(done) {
+    it("Gets film by id", function (done) {
         chai.request(`${url}/films`).get("/get/1").end((err, res) => {
             expect(err).to.be.null;
             expect(res).to.have.status(200);
@@ -82,7 +82,7 @@ describe("Film tests", function () {
 
     })
 
-    it("Gets film with title included in search term", function(done) {
+    it("Gets film with title included in search term", function (done) {
         chai.request(`${url}/films`).get("/search?q=rubb").end((err, res) => {
             expect(err).to.be.null;
             expect(res).to.have.status(200);
@@ -97,7 +97,7 @@ describe("Film tests", function () {
         });
     })
 
-    it("Gets film with genre included in search term", function(done) {
+    it("Gets film with genre included in search term", function (done) {
         chai.request(`${url}/films`).get("/search?q=Horror").end((err, res) => {
             expect(err).to.be.null;
             expect(res).to.have.status(200);
@@ -113,7 +113,7 @@ describe("Film tests", function () {
         });
     })
 
-    it("Gets all current films", function(done) {
+    it("Gets all current films", function (done) {
         chai.request(`${url}/films`).get("/current").end((err, res) => {
             expect(err).to.be.null;
             expect(res).to.have.status(200);
@@ -128,7 +128,7 @@ describe("Film tests", function () {
         });
     })
 
-    it("Gets all upcoming films", function(done) {
+    it("Gets all upcoming films", function (done) {
         chai.request(`${url}/films`).get("/upcoming").end((err, res) => {
             expect(err).to.be.null;
             expect(res).to.have.status(200);
@@ -143,7 +143,7 @@ describe("Film tests", function () {
         });
     })
 
-    it("Creates a film", function(done) {
+    it("Creates a film", function (done) {
         const film = {
             film_id: 4,
             title: "New film",
@@ -161,7 +161,7 @@ describe("Film tests", function () {
         });
     });
 
-    it("Updates a film", function(done) {
+    it("Updates a film", function (done) {
         const film = {
             title: "New Title"
         }
@@ -176,7 +176,7 @@ describe("Film tests", function () {
         });
     })
 
-    it("Deletes a film", function(done) {
+    it("Deletes a film", function (done) {
         chai.request(`${url}/films`).delete("/delete/2").end((err, res) => {
             expect(err).to.be.null;
             expect(res).to.have.status(200);
@@ -185,11 +185,6 @@ describe("Film tests", function () {
 
             return done();
         });
-    })
-
-
-    after("Stop Server", function(){
-        server.close();
     })
 
 })
