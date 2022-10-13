@@ -22,6 +22,7 @@ import Contact from './components/contact/Contact.jsx'
 import Discussion from "./components/discussion/Discussion.jsx";
 import Classifications from "./components/classifications/classifications.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
+import UpcomingFilm from "./components/listings/films/UpcomingFilm.jsx";
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
             <Route path='whatson' element={<WhatsOn />} />
             <Route path='upcoming' element={<Upcoming />} />
             <Route path='film/:id' element={<Film />} />
+            <Route path='film/upcoming/:id' element={<UpcomingFilm />} />
           </Route>
           <Route path='makebooking' element={<MakeBooking />} />
           <Route path='payment' element={<Payment />}/>
