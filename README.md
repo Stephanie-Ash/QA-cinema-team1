@@ -116,3 +116,60 @@ These instructions will detail how to open and run the project.
 
 * Both the express app server and the react app server need to be running in order to run the project.
 * Open two terminals and navigate to the node-express folder in one and the react/qa-cinema folder in another. Run npm start in both terminals.
+
+## Project Features
+
+Below are some screenshots of some of the front-end pages of the project.
+
+Film pages
+
+![film page](documentation/film-pages.jpg)
+
+Bookings
+
+![bookings](documentation/bookings.jpg)
+
+Places to Go Page
+
+![places to go](documentation/places-to-go-page.jpg)
+
+## Testing
+
+### Api Testing
+
+Tests have been written for the various backend api http routes. They can be found within the tests folder in the node-express app. The current testing coverage for this app is ?????%. To run the tests open a terminal in the node-express folder and run npm test in the terminal. To create the coverage report run npm run coverage.
+
+![Testing Coverage](documentation/testing-coverage-ims-project.jpg)
+
+#### Front End Testing
+
+All the functionality on the front end has been manually tested.
+
+* The links on all pages have been tested to check they are linking to the correct pages.
+* The booking system has been tested to make sure it successfully creates a booking.
+* The email form has been tested to make sure it creates an email in the database.
+* The discussions page has been tested to make sure it creates posts and correctly filters the displayed discussion posts.
+* The admin login and discussion post approval system has been tested to ensure functionality.
+
+## Built With
+
+* [JavaScript](https://www.javascript.com/) - Backend programming language
+* [Node](https://nodejs.org/en/) - Backend Development
+* [Express](https://expressjs.com/) - API Develpment Platform
+
+## Versioning
+
+* [Git](https://git-scm.com/) has been used as a version control system.
+
+## Authors
+
+* **Stephanie Ashdown** - [stephanie-ash](https://github.com/Stephanie-Ash)
+* **Rebecca Swinton** - [rebeccaswinton](https://github.com/rebeccaswinton)
+* **Kishan Kunvardia** - [kishankunvardia](https://github.com/kishankunvardia)
+* **Leonid Gornovskiy** - [lng1996](https://github.com/lng1996)
+
+## License
+
+This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md) file for details 
+
+*For help in [Choosing a license](https://choosealicense.com/)*
