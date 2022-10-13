@@ -127,6 +127,27 @@ describe("Booking tests", function () {
         });
     });
 
+    it("Gives error when create film without required field", function (done) {
+        const booking = {
+            cust_name: "Jordan Benbelaid",
+            film: "Best Film",
+            date: "15/10/2022",
+            time: "09:00",
+            screen_type: "Standard",
+            adults: 1,
+            total_seats: 1,
+            price: 10,
+            has_paid: true
+        }
+
+        chai.request(`${url}/bookings`).post("/create").send(booking).end((err, res) => {
+            expect(res).to.have.status(500);
+
+            return done();
+        });
+    });
+
+
     it("Updates a booking", function (done) {
         const booking = {
             hasPaid: false
