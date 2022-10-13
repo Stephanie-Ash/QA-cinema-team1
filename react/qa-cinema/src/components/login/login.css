@@ -1,0 +1,123 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+.App {
+    background-color: white;
+  }
+  
+  .Auth-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .Auth-form {
+    width: 420px;
+    box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    background-color: rgb(125, 8, 8);
+  }
+  
+  .Auth-form-content {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+  
+  .Auth-form-title {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+  }
+  
+
+
+body { background:rgb(30,30,40); }
+form { max-width:420px; margin:50px auto; }
+
+.feedback2{
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: #330613;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 3px;
+    border-radius: 10px;
+
+
+}
+.feedback{
+  color:rgb(0, 0, 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: rgb(255, 255, 255);
+  border:5px solid #330613;
+  transition: all 0.3s;
+  padding: 16px;
+  width:auto;
+  box-sizing: border-box;
+  outline:0;
+  margin-left: 0;
+  text-align: left;
+  border-radius: 50px;
+}
+
+.feedback3{
+    color:rgb(255, 255, 255);
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight:500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: rgb(96, 27, 58);
+    border:0px solid #330613;
+    transition: all 0.3s;
+    padding: 16px;
+    width:auto;
+    box-sizing: border-box;
+    outline:0;
+    margin-left: 0;
+    text-align: left;
+    border-radius: 50px;
+  }
+  
+
+
+
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+
+.subcom {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 48%;
+  background:#CC6666;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  margin-left: auto;
+  margin-right: auto;
+
+
+  transition: all 0.3s;
+
+  font-weight:10;
+  display: inline-block;
+  white-space: nowrap;
+  padding: 0.5rem;
+
+}
+.subcom:hover { background:#ffffff; color: black }

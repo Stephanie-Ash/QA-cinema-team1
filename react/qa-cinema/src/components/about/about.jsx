@@ -5,6 +5,7 @@ import Kishan from "../../images/Kishan.png"
 import Leo from "../../images/Leo.png"
 import Rebecca from "../../images/Rebecca.png"
 
+
 import { Link } from 'react-router-dom'
 
 
@@ -14,6 +15,8 @@ import { Link } from 'react-router-dom'
 const About = () => {
 
   return (
+
+    
 
     <div className="mainbox">
       <h1>About Us</h1>

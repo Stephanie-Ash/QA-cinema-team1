@@ -39,8 +39,12 @@ const Navbar = () => {
                                     <li><Link className="dropdown-item" to="/findus">Find Us</Link></li>
                                     <li><Link className="dropdown-item" to="/contact">Contact Us</Link></li>
                                     <li><Link className="dropdown-item" to="/about">About Us</Link></li>
+                                    <li><Link className="dropdown-item" to="/login">Management Login</Link></li>
                                 </ul>
                             </li>
+        
+                    
+                            
                         </ul>
                         <Searchbox />
                     </div>
