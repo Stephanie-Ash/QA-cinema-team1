@@ -137,9 +137,9 @@ Places to Go Page
 
 ### Api Testing
 
-Tests have been written for the various backend api http routes. They can be found within the tests folder in the node-express app. The current testing coverage for the app is ?????%. To run the tests open a terminal in the node-express folder and run npm test in the terminal. To create the coverage report run npm run coverage.
+Tests have been written for the various backend api http routes. They can be found within the tests folder in the node-express app. The current testing coverage for the routes is 80.57%. To run the tests open a terminal in the node-express folder and run npm test in the terminal. To create the coverage report run npm run coverage.
 
-![Testing Coverage](documentation/testing-coverage-ims-project.jpg)
+![Testing Coverage](documentation/coverage-report.jpg)
 
 #### Front End Testing
 
