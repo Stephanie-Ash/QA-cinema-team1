@@ -96,9 +96,3 @@ describe("Topic tests", function() {
 
     })
 
-after("Stop Server", function(){
-    server.close();
-})
-
-
-

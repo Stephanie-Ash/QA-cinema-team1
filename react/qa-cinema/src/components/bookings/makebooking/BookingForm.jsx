@@ -11,7 +11,7 @@ const BookingForm = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (props.booking.adults === 0 && props.booking.children === 0 && props.booking.concessions === 0) {
+        if (props.booking.adults === "0" && props.booking.children === "0" && props.booking.concessions === "0") {
             alert("Please select at least one seat!")
         } else {
             navigate("/payment", { state: { savedBooking: props.booking } })

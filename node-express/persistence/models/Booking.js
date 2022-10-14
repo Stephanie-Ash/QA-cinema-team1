@@ -2,7 +2,10 @@ const mongoose = require('mongoose');
 const {Schema, model} = mongoose;
 
 const BookingSchema = new Schema({
-    booking_num: String,
+    booking_num: {
+        type: String,
+        required: true
+    },
     cust_name: String,
     cust_email: String,
     film: String,

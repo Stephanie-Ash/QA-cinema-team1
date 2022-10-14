@@ -2,7 +2,7 @@ import {
   BrowserRouter, Routes, Route
 } from "react-router-dom";
 import About from './components/about/about.jsx';
-
+import Loggedin from "./components/login/loggedin.jsx";
 import Navbar from './components/Navbar.jsx';
 import Home from './components/home/home.jsx';
 import Screens from './components/screens/screens.jsx';
@@ -22,6 +22,8 @@ import Contact from './components/contact/Contact.jsx'
 import Discussion from "./components/discussion/Discussion.jsx";
 import Classifications from "./components/classifications/classifications.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
+import Login from "./components/login/login.jsx";
+
 
 function App() {
 
@@ -51,6 +53,8 @@ function App() {
           <Route path='discussion' element={<Discussion />} />
           <Route path='classifications' element={<Classifications />} />
           <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/loggedin" element={<Loggedin />} />
         </Routes>
       </main>
       <Footer />
