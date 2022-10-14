@@ -143,20 +143,5 @@ describe("Post test", function () {
         return done();
     })
 
-    it('Should not create a post without username field', (done) => {
-        let postFive = {
-            topic_name: "Moonlight",
-            comment: "confusing film",
-            rating: 4,
-            datePublished: "07/10/2022",
-            isApproved: true
-        }
-        chai.request(`${url}/posts`).post("/create").send(postFive).end((err, res) => {
-            expect(err).to.be.null;
-            expect(res).to.have.status(500);
-        });
-        return done();
-
-    })
 
 })
