@@ -16,11 +16,11 @@ For the more complicated user stories that required both frontend and backend fu
 
 The work was was tracked in three sprints using a Kanban board and smart commits to manage the tracking and completion of the tasks. Stories and tasks were assigned to team members to carry out. Daily stand-up meetings were carried out to track the progress of the team members and deal with any concerns. Sprint retrospective meetings were held at the end of the sprints to discuss what went well and what could be approved in the next sprint.
 
-A risk assessment was also created to prepare for any risks that may have adversely affected the project.
+A risk assessment was also created to prepare for any risks that may have adversely affected the project. This and further screenshots for the kanban boards throughout the project can be found in the Additional Docs folder within documentation.
 
 ### Database Schema
 
-An outline of the database schema was planned in advance and adapted as the project progressed. The MVP was kept in mind while creating the schema but also possible future expansion and fuctionaliy. A diagram of the final schema can be seen below.
+An outline of the database schema was planned in advance and adapted as the project progressed. The MVP was kept in mind while creating the schema but also possible future expansion and fuctionaliy. A diagram of the schema can be seen below. A user id (UID) model was added after this diagram was created to provide additional functionality.
 
 ![ERD](documentation/database-diagram.jpg)
 

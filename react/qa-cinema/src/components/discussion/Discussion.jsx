@@ -91,28 +91,28 @@ return (
     <>
     <h1> Discussion Board</h1> 
      <form className="d-flex" onSubmit={handleSubmit}>
-        <label htmlFor="topics" class="fw-bolder">Choose a topic:</label>
-        <select name="topic" id="topic" class="form-select" aria-label="Default select example"> 
+        <label htmlFor="topics" className="fw-bolder">Choose a topic:</label>
+        <select name="topic" id="topic" className="form-select" aria-label="Default select example"> 
         {topics.map((topic, index) => 
         <option key ={index} value={topic.topic_name}>{topic.topic_name}</option>)}
         </select> 
         <button type='submit-button'className="btn btn-danger" > Display Discussion</button>
         </form>
 
-         <ul class="discussion list-group">
+         <ul className="discussion list-group">
          {posts.map((post, index) =>
-         <li key = {index} > <p class="username fw-bolder">
+         <li key = {index} > <p className="username fw-bolder">
             <i className="fa-solid fa-message-smile"></i> Username: {post.username}</p>
          <p> Comment: {post.comment}</p>
           <p className="user-rate"> Rating: {post.rating} Star(s)</p>
-          <span class="badge bg-secondary rounded-pill">
+          <span className="badge bg-secondary rounded-pill">
           <p className="datePublished"> Date Published: {post.datePublished}</p></span>
           </li>)}
           </ul>
 
           
-          <div class="discussform d-grid gap-2 col-6 mx-auto">
-            <button onClick={displayForm}class="btn btn-danger" > Create Post on {topic}
+          <div className="discussform d-grid gap-2 col-6 mx-auto">
+            <button onClick={displayForm}className="btn btn-danger" > Create Post on {topic}
             <i className="fa-solid fa-angles-down"></i></button></div>
             {showForm && (
                 <form onSubmit={postForm} className="mb-5">

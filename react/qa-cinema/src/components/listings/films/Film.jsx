@@ -39,7 +39,7 @@ const Film = () => {
 
     return datesArr;
   }
-  console.log(film);
+
    if (film[0].current === true){
 
   return (
