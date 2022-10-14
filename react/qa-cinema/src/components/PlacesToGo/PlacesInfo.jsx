@@ -7,9 +7,9 @@ const PlacesToGo = () => {
 
   return (
     <div>
-      <h1 className="Places"> Places To Go Nearby:</h1>
+      <h1 className="Places"> Places To Go Nearby</h1>
       <div className="text-center">
-        <p className='attraction'> Find out about all of the best attractions to visit local to us, from Indigo's Kitchen to Gravifun - find the best suggestions here and why not head over to our membership to save big on cinema tickets while you’re at it!</p>
+        <p className='attraction'> Find out about all of the best attractions to visit local to us, from Indigo's Kitchen to Paradox Island - find the best suggestions here and why not head over to our membership to save big on cinema tickets while you’re at it!</p>
       </div>
       <div className="container-fluid">
         <div className="row align-items-start">
