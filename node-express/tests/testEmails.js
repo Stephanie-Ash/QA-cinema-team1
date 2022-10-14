@@ -24,14 +24,12 @@ describe("Email tests", function () {
             subject: "Complaint",
             message: "The seats were not clean. I want a refund."
         }
-
         let emailTwo = {
             fullname: "Charlie Chaplin",
             email: "charliechaplin@gmail.com",
             subject: "Great staff",
             message: "The staff were very helpful today!"
         }
-
         await Email.deleteMany({});
         await Email.create(emailOne);
         await Email.create(emailTwo);
@@ -68,7 +66,6 @@ describe("Email tests", function () {
     })
 
     it("Creates one email", function (done) {
-
         let email = {
             fullname: "Denzer Dante",
             email: "denzerdante@gmail.com",
@@ -90,7 +87,6 @@ describe("Email tests", function () {
     })
 
     it("Create one email but required fields missing", function (done) {
-
         let email = {
             fullname: "Denzer Dante",
             email: "denzerdante@gmail.com",
@@ -112,5 +108,4 @@ describe("Email tests", function () {
             return done();
         });
     })
-
 })

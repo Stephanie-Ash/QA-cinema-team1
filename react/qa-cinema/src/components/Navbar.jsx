@@ -3,8 +3,6 @@ import logo from "../images/logo.png";
 import '../nav.css';
 import Searchbox from "./Searchbox.jsx";
 
-
-
 const Navbar = () => {
     return (
         <header>
@@ -42,9 +40,6 @@ const Navbar = () => {
                                     <li><Link className="dropdown-item" to="/login">Management Login</Link></li>
                                 </ul>
                             </li>
-        
-                    
-                            
                         </ul>
                         <Searchbox />
                     </div>
@@ -52,7 +47,5 @@ const Navbar = () => {
             </nav>
         </header>
     )
-
 }
-
 export default Navbar;
