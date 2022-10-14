@@ -94,13 +94,13 @@ const postForm = event => {
             });
         event.target.reset();
 
-        // document.getElementById('hiddenmessage').innerHTML = "Email has been submitted, a member of our team will contact you shortly.";
+        
         window.alert("Thank you for your comment, it will be reviewed by a member of our team! ");
 
 }
 return (
     <>
-    <h1> Discussion Board:</h1> 
+    <h1> Discussion Board</h1> 
      <form className="d-flex" onSubmit={handleSubmit}>
         <label htmlFor="topics" class="fw-bolder">Choose a topic:</label>
         <select name="topic" id="topic" class="form-select" aria-label="Default select example"> 

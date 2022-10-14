@@ -126,8 +126,6 @@ it('Should not create a post without username field', (done) => {
     });
     return done ();
 
-
-
 })
 
 })

@@ -4,7 +4,7 @@ const OpeningTimes = () => {
     return (
         <>
 
-            <h1>Opening Times:</h1>
+            <h1>Opening Times</h1>
             <div className="container-fluid">
                 <table className="OpeningTimes mx-auto">
                     <tbody>
