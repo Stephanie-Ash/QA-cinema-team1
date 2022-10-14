@@ -31,25 +31,11 @@ describe("UID tests", function () {
         await UID.create(UIDTwo);
     })
 
-    it("Gets all uids", function (done) {
-        chai.request(`${url}/uids`).get("/getAll").end((err, res) => {
-            expect(err).to.be.null;
-            expect(res).to.have.status(200);
-            expect(res.body.length).to.equal(2);
-            expect(res.body[0]).to.include({
-                username: "Jordan",
-                password: "secure"
-            });
-            return done();
-        });
-    })
-
     it("Gets one uid", function (done) {
-        chai.request(`${url}/uids`).get("/get/Jordan").end((err, res) => {
+        chai.request(`${url}/uids`).get("/login/Jordan").end((err, res) => {
             expect(err).to.be.null;
             expect(res).to.have.status(200);
-            expect(res.body.length).to.equal(1);
-            expect(res.body[0]).to.include({
+            expect(res.body).to.include({
                 username: "Jordan",
                 password: "secure"
             });
@@ -86,4 +72,8 @@ describe("UID tests", function () {
             return done();
         });
     })
+})
+
+after("Stop Server", function(){
+    server.close();
 })
