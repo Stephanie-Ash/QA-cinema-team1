@@ -1,0 +1,27 @@
+.seatingIntro {
+    padding: 0 0 3% 0;
+    text-align: center;
+
+}
+
+.screen {
+    width: 60%;
+    aspect-ratio: 1 / 1;
+}
+
+td {
+    padding: 0 10px 20px 10px;
+    max-width: 400px;
+    text-align: center;
+    vertical-align: top;
+}
+
+table {
+
+    width: 100%;
+}
+
+.seatingTitle {
+    text-decoration: underline;
+
+}

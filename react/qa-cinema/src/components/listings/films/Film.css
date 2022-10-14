@@ -1,0 +1,53 @@
+.card-mb-3-standard{
+    background-color: rgb(114, 41, 41);
+    padding: 12px;
+    display: flex
+}
+.film-img{
+    width: 100% ;
+    aspect-ratio: 5/3;
+}
+
+div.card-body:hover{
+    box-shadow: 0 0 5px #25040e;
+    border: none;
+}
+
+.col-standard{
+  padding: 0px !important;
+}
+.times{
+    margin: 0px;
+}
+div.col-md-8{
+    display: flex;
+}
+.col-deluxe{
+padding:0px
+
+}
+p.standard{
+    margin-top: 2%;
+    text-align: center;
+}
+ 
+p.deluxe{
+    margin-top: 2%;
+    text-align: center;
+}
+.dayofweek{
+    margin-top: 2%;
+    text-align: center;
+}
+
+.times-standard {
+    margin-bottom: 25px;
+}
+
+.screen-link {
+    color: #fff;
+}
+
+.screen-link:hover {
+    color: #B0B0B0;
+}
